@@ -63,13 +63,24 @@
                 </p>
             </section>
 
-            <!-- Slide 4: The Hero Chart -->
+            <!-- Slide 4: Animated Rule Growth -->
+            <section>
+                <h3>Dynamic Rule Growth Flow</h3>
+                <ol>
+                    <li class="fragment fade-up">Monitor Validation Loss for stagnation (patience = 20 epochs).</li>
+                    <li class="fragment fade-up">If plateaued, identify the data coordinate with the <strong>Maximum Residual Error</strong>.</li>
+                    <li class="fragment fade-up">Spawn a new Fuzzy Rule exactly at that coordinate.</li>
+                    <li class="fragment fade-up">Re-initialize Optimizer to adapt to the new structural parameters.</li>
+                </ol>
+            </section>
+
+            <!-- Slide 5: The Hero Chart -->
             <section>
                 <h3>Dynamic Rule Generation vs. Validation Convergence</h3>
                 <img src="hero_chart.png" alt="Rule Count vs Loss Chart">
             </section>
 
-            <!-- Slide 5: Ablation Results (Table) -->
+            <!-- Slide 6: Ablation Results (Table) -->
             <section>
                 <h3>Ablation Results vs Original Paper</h3>
                 <p>Testing on a synthetic 27-feature Appliances Energy equivalent.</p>
@@ -106,10 +117,21 @@
                 <br>
                 <p style="font-size: 1rem;" class="center-text"><em>Our ADAR implementation successfully reduced RMSE below the static baseline [cite: 1].</em></p>
             </section>
-
-            <!-- Slide 6: Key Insights & Limitations -->
+            
+            <!-- Slide 7: Key Insight Slide -->
             <section>
-                <h3>Reflections & Insights</h3>
+                <h3>Key Insight: Why ADAR?</h3>
+                <p class="center-text"><strong>Why is ADAR a better engineering choice than a static ANFIS model for high-dimensional IoT data?</strong></p>
+                <ul>
+                    <li class="fragment fade-up"><strong>Interpretability Intact:</strong> Static ANFIS requires pre-processing feature drops, whereas ADAR preserves the semantic meaning of inputs.</li>
+                    <li class="fragment fade-up"><strong>Automated Scaling:</strong> ADAR autonomously calibrates rule quantity to data complexity, eliminating manual grid-searches for optimal structure size.</li>
+                    <li class="fragment fade-up"><strong>Hardware Efficiency:</strong> By structurally pruning ~40% of inputs mid-training, ADAR trims computational overhead dynamically.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 8: Reflections & Limitations -->
+            <section>
+                <h3>Reflections & Limitations</h3>
                 <ul>
                     <li><strong>Growth Patience:</strong> We initially struggled with the growth threshold, but found that a patience parameter of 20-50 yielded the most stable pruning results.</li>
                     <li><strong>Thresholds:</strong> We opted for an attribute pruning threshold of $\theta_{attr} = 0.25$ because it securely isolated dead features while preserving variance.</li>
