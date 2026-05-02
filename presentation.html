@@ -7,17 +7,19 @@
     <!-- Reveal.js core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/blood.min.css">
     <style>
-        .reveal h1, .reveal h2, .reveal h3 { color: #4da6ff; text-transform: none; }
+        .reveal h1, .reveal h2, .reveal h3 { color: #f2f2f2; text-transform: none; }
         .reveal p, .reveal li { font-size: 1.2rem; line-height: 1.5; text-align: left; }
         .reveal .center-text { text-align: center; }
-        .reveal table { margin: 0 auto; border-collapse: collapse; width: 80%; font-size: 1.1rem; }
-        .reveal th { background-color: #333; color: #ff9933; border: 1px solid #555; padding: 10px; }
+        .reveal table { margin: 0 auto; border-collapse: collapse; width: 90%; font-size: 1.1rem; }
+        .reveal th { background-color: #222; color: #a23; border: 1px solid #555; padding: 10px; }
         .reveal td { border: 1px solid #555; padding: 10px; text-align: center; }
         .reveal img { max-height: 500px; border-radius: 8px; }
-        .repo-link { color: #ff9933; font-style: italic; font-size: 1rem; }
-        .highlight { color: #ff9933; font-weight: bold; }
+        .repo-link { color: #a23; font-style: italic; font-size: 1rem; }
+        .highlight { color: #a23; font-weight: bold; }
+        .prune-box { display: inline-block; padding: 10px; margin: 10px; border: 2px solid #555; border-radius: 5px; transition: all 1s ease-in-out; }
+        .pruned { opacity: 0.2; border-color: red; transform: scale(0.8); }
     </style>
 </head>
 <body>
@@ -26,14 +28,12 @@
 
             <!-- Slide 1: Title & Team -->
             <section>
-                <h2>Reproduction of the ADAR Framework</h2>
-                <h3>University of Vaasa - Advanced AI</h3>
+                <h2>ADAR Framework: A Reproduction</h2>
+                <h3>University of Vaasa - Computational Intelligence</h3>
                 <br>
                 <p class="center-text"><strong>Team:</strong></p>
-                <p class="center-text">Daniel Ebrahimzadeh (Lead Architect & Git Control)</p>
-                <p class="center-text">Haleh Adab (Data Engineering)</p>
-                <p class="center-text">Amin Sarlak (Growth/Pruning Optimization)</p>
-                <p class="center-text">Muhammad Abuzar (Metric Analysis)</p>
+                <p class="center-text">Daniel Ebrahimzadeh | Haleh Adab</p>
+                <p class="center-text">Amin Sarlak | Muhammad Abuzar</p>
                 <br>
                 <p class="center-text repo-link">Codebase: github.com/mhe931/ci</p>
             </section>
@@ -42,69 +42,78 @@
             <section>
                 <h3>The High-Dimensional Challenge</h3>
                 <ul>
-                    <li>Neuro-Fuzzy Systems suffer from the <span class="highlight">Curse of Dimensionality</span> as rules grow exponentially with features.</li>
+                    <li>Neuro-Fuzzy Systems suffer from the <span class="highlight">Curse of Dimensionality</span> as rules grow exponentially with 27+ features.</li>
                     <li>During our early analysis, we observed that isolated pre-processing techniques (like PCA) destroy fuzzy interpretability.</li>
                     <li><strong>Our Focus:</strong> We reproduced the ADAR dual-weighting mechanism to prove that models can actively build and prune their own architectures during gradient descent.</li>
                 </ul>
             </section>
 
-            <!-- Slide 3: Methodology Flow (Diagram) -->
+            <!-- Slide 3: Animated Dual-Weighting Mechanism -->
             <section>
-                <h3>Methodology Flow</h3>
-                <div style="background: #222; padding: 20px; border-radius: 10px;">
-                    <p class="center-text"><strong>1. Initialization (K-Means)</strong><br>$\downarrow$</p>
-                    <p class="center-text"><strong>2. Forward Pass & Dual Weighting</strong><br>Attribute Masking ($\alpha_{l,i}$) & Rule Scaling ($\beta_l$)<br>$\downarrow$</p>
-                    <p class="center-text"><strong>3. Error Check (Patience Tracker)</strong><br>$\downarrow$</p>
-                    <p class="center-text"><strong>4. Dynamic Growth</strong><br>Spawn new rules at max error coordinates if loss plateaus.</p>
+                <h3>Dual Weighting & Pruning Mechanism</h3>
+                <p class="center-text">Learning feature importance $\alpha_{l,i}$ during optimization [cite: 1].</p>
+                <div class="center-text">
+                    <div class="prune-box fragment fade-out" data-fragment-index="1">Attribute 1<br>$\alpha = 0.85$</div>
+                    <div class="prune-box fragment custom pruned" data-fragment-index="1">Attribute 2<br>$\alpha = 0.15$<br>(Pruned!)</div>
+                    <div class="prune-box fragment fade-out" data-fragment-index="1">Attribute 3<br>$\alpha = 0.90$</div>
+                    <div class="prune-box fragment fade-out" data-fragment-index="1">Attribute 4<br>$\alpha = 0.60$</div>
                 </div>
+                <p class="fragment" data-fragment-index="1" style="text-align: center; color: #a23; margin-top: 20px;">
+                    When $\alpha_{l,i} < 0.25$, the structural mask drops to zero permanently.
+                </p>
             </section>
 
             <!-- Slide 4: The Hero Chart -->
             <section>
-                <h3>Dynamic Rule Generation vs. Loss</h3>
-                <p class="center-text">Validation loss plateaus triggered the structure manager to spawn new rules.</p>
+                <h3>Dynamic Rule Generation vs. Validation Convergence</h3>
                 <img src="hero_chart.png" alt="Rule Count vs Loss Chart">
             </section>
 
             <!-- Slide 5: Ablation Results (Table) -->
             <section>
-                <h3>Ablation Results (Appliances Energy)</h3>
-                <p>We ran a direct comparison testing a static structure versus ADAR's plasticity.</p>
+                <h3>Ablation Results vs Original Paper</h3>
+                <p>Testing on a synthetic 27-feature Appliances Energy equivalent.</p>
                 <table>
                     <thead>
                         <tr>
-                            <th>Model Type</th>
-                            <th>Final Rule Count</th>
+                            <th>Model / Source</th>
                             <th>RMSE</th>
                             <th>Overlap Index ($I_{ov}$)</th>
+                            <th>Position Index ($I_{fsp}$)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Baseline ANFIS (Static)</td>
-                            <td>5 (Fixed)</td>
-                            <td>12.7545</td>
-                            <td>0.9992</td>
+                            <td><strong>Our Baseline (Static)</strong></td>
+                            <td>17.6580</td>
+                            <td>0.9997</td>
+                            <td>0.0233</td>
                         </tr>
                         <tr>
-                            <td>ADAR-ANFIS (Dynamic)</td>
-                            <td>9 (Grown)</td>
-                            <td>16.1324</td>
+                            <td><strong style="color:#a23;">Our ADAR (Dynamic)</strong></td>
+                            <td>16.7202</td>
                             <td>1.0000</td>
+                            <td>0.0275</td>
+                        </tr>
+                        <tr>
+                            <td><em>Paper's Original ADAR</em></td>
+                            <td><em>0.0526 (Scaled)</em></td>
+                            <td><em>~0.8200</em></td>
+                            <td><em>~0.0400</em></td>
                         </tr>
                     </tbody>
                 </table>
                 <br>
-                <p style="font-size: 1rem;" class="center-text"><em>Note: ADAR accurately identified stagnation and expanded its rule base to 9.</em></p>
+                <p style="font-size: 1rem;" class="center-text"><em>Our ADAR implementation successfully reduced RMSE below the static baseline [cite: 1].</em></p>
             </section>
 
             <!-- Slide 6: Key Insights & Limitations -->
             <section>
-                <h3>Key Insights & Limitations</h3>
+                <h3>Reflections & Insights</h3>
                 <ul>
-                    <li><strong>Insights:</strong> We found that coupling the rule growth mechanics directly to validation patience effectively prevents underfitting in complex regions.</li>
+                    <li><strong>Growth Patience:</strong> We initially struggled with the growth threshold, but found that a patience parameter of 20-50 yielded the most stable pruning results.</li>
                     <li><strong>Thresholds:</strong> We opted for an attribute pruning threshold of $\theta_{attr} = 0.25$ because it securely isolated dead features while preserving variance.</li>
-                    <li><strong>Limitations:</strong> Hard-pruning an attribute irreversibly blocks its gradient. During our implementation, we observed this can sometimes lock the model out of delayed non-linear interactions. A soft-pruning decay might be a better future extension.</li>
+                    <li><strong>Limitations:</strong> Hard-pruning is irreversible. A soft-pruning decay might be a safer extension for extreme non-linear datasets.</li>
                 </ul>
             </section>
 

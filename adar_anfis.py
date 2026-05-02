@@ -261,24 +261,34 @@ def main():
     print(f"Baseline ANFIS -> RMSE: {b_rmse:.4f} | I_ov: {b_iov:.4f} | I_fsp: {b_ifsp:.4f} | Rules: {b_rules}")
     print(f"ADAR-ANFIS     -> RMSE: {a_rmse:.4f} | I_ov: {a_iov:.4f} | I_fsp: {a_ifsp:.4f} | Rules: {a_rules}")
 
-    # Generate Hero Chart
-    plt.figure(figsize=(10, 5))
-    ax1 = plt.gca()
-    ax2 = ax1.twinx()
+    # Generate Hero Chart with 2 Subplots
+    fig, (ax1, ax3) = plt.subplots(1, 2, figsize=(14, 5))
     
-    ax1.plot(a_loss, 'b-', label='Train Loss')
-    ax1.plot(a_val, 'r--', label='Validation Loss')
+    # Left Subplot: Loss and Rule Growth
+    ax2 = ax1.twinx()
+    ax1.plot(a_loss, 'b-', label='ADAR Train Loss')
+    ax1.plot(a_val, 'r--', label='ADAR Val Loss')
     ax2.plot(a_rh, 'g:', linewidth=2, label='Rule Count')
     
     ax1.set_xlabel('Epochs')
     ax1.set_ylabel('MSE Loss', color='b')
     ax2.set_ylabel('Number of Rules', color='g')
-    plt.title('ADAR-ANFIS: Dynamic Rule Growth and Validation Convergence')
+    ax1.set_title('Dynamic Rule Growth and Validation Convergence')
     
     lines_1, labels_1 = ax1.get_legend_handles_labels()
     lines_2, labels_2 = ax2.get_legend_handles_labels()
     ax1.legend(lines_1 + lines_2, labels_1 + labels_2, loc='upper right')
     
+    # Right Subplot: RMSE Comparison
+    models = ['Baseline ANFIS', 'ADAR-ANFIS']
+    rmses = [b_rmse, a_rmse]
+    bars = ax3.bar(models, rmses, color=['gray', '#4da6ff'])
+    ax3.set_ylabel('Final RMSE')
+    ax3.set_title('RMSE vs. Baseline ANFIS')
+    for bar in bars:
+        yval = bar.get_height()
+        ax3.text(bar.get_x() + bar.get_width()/2.0, yval + 0.5, f'{yval:.2f}', ha='center', va='bottom')
+        
     plt.tight_layout()
     plt.savefig('hero_chart.png', dpi=300)
     
