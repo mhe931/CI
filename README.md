@@ -14,8 +14,9 @@ The primary objective of this repository is to demonstrate the viability of dual
 
 ## Repository Contents
 - `adar_anfis.py`: The core implementation (PyTorch). Contains the full algorithm including K-Means initialization, the `ADARLayer` (Dual Weighting), and the `StructureManager` for structural plasticity. It explicitly executes an ablation study on a 27-feature dataset.
-- `Final_Report.docx`: The official academic submission formatted via the University's guidelines, detailing mathematical proofs, novelties, and a critical data engineering analysis.
-- `presentation.html`: A standalone interactive HTML/JS slide deck designed for the project defense.
+- `Final_Report.md`: The official academic submission formatted via the University's guidelines, detailing mathematical proofs, novelties, and a critical data engineering analysis.
+- `comparison_results.json`: A generated JSON file containing the explicit RMSE, $I_{ov}$, $I_{fsp}$, and rule count metrics for both the Baseline ANFIS and ADAR-ANFIS trials.
+- `presentation.html`: A sleek standalone Reveal.js interactive slide deck designed for the project defense.
 - `hero_chart.png`: Visual evidence of dynamic rule generation intersecting with validation loss.
 - `/paper`: Directory containing the original research PDF and instructions.
 
@@ -26,16 +27,16 @@ This framework requires Python 3.10+ and standard numerical/deep learning librar
 pip install torch scikit-learn numpy pandas matplotlib
 ```
 
-**Running the End-to-End Validation:**
+**Running the End-to-End Ablation Validation:**
 ```bash
 python adar_anfis.py
 ```
 This command will:
 1. Synthesize a 27-variable high-dimensional space (equivalent to Appliances Energy dataset).
-2. Execute the Baseline ANFIS (Static Structure).
-3. Execute the ADAR-ANFIS (Dynamic Structure).
-4. Output the definitive RMSE, $I_{ov}$, and $I_{fsp}$ indices into the console.
-5. Export the latest `hero_chart.png`.
+2. Execute **Trial A:** Baseline ANFIS (Static Structure, growing/pruning disabled).
+3. Execute **Trial B:** Full ADAR-ANFIS Framework (Dual weighting and structure scaling enabled).
+4. Export the resulting metrics automatically into `comparison_results.json`.
+5. Export the latest convergence chart to `hero_chart.png`.
 
 ## References
 [1] Ke Liu, Jing Ma, and Edmund M-K Lai. "A Dynamic Fuzzy Rule and Attribute Management framework for Fuzzy Inference Systems in High-Dimensional Data."

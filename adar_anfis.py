@@ -282,9 +282,23 @@ def main():
     plt.tight_layout()
     plt.savefig('hero_chart.png', dpi=300)
     
-    with open('ablation_results.txt', 'w') as f:
-        f.write(f"Baseline, {b_rmse:.4f}, {b_iov:.4f}, {b_ifsp:.4f}, {b_rules}\n")
-        f.write(f"ADAR, {a_rmse:.4f}, {a_iov:.4f}, {a_ifsp:.4f}, {a_rules}\n")
+    import json
+    results = {
+        "Baseline": {
+            "RMSE": round(b_rmse, 4),
+            "I_ov": round(b_iov, 4),
+            "I_fsp": round(b_ifsp, 4),
+            "Rules": b_rules
+        },
+        "ADAR": {
+            "RMSE": round(a_rmse, 4),
+            "I_ov": round(a_iov, 4),
+            "I_fsp": round(a_ifsp, 4),
+            "Rules": a_rules
+        }
+    }
+    with open('comparison_results.json', 'w') as f:
+        json.dump(results, f, indent=4)
 
 if __name__ == "__main__":
     main()

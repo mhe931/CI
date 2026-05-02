@@ -1,111 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADAR Framework Presentation</title>
+    <title>ADAR Framework Reproduction</title>
+    <!-- Reveal.js core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #1e1e1e; color: #fff; overflow: hidden; }
-        .slides { display: flex; width: 500vw; height: 100vh; transition: transform 0.5s ease-in-out; }
-        .slide { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
-        h1 { font-size: 3rem; color: #4da6ff; margin-bottom: 20px; text-align: center; }
-        h2 { font-size: 2rem; color: #ff9933; margin-bottom: 30px; text-align: center; }
-        p, ul { font-size: 1.5rem; max-width: 800px; line-height: 1.6; }
-        li { margin-bottom: 15px; }
-        .controls { position: fixed; bottom: 30px; width: 100%; display: flex; justify-content: center; gap: 20px; }
-        button { background-color: #333; color: white; border: 2px solid #555; padding: 10px 20px; font-size: 1.2rem; cursor: pointer; border-radius: 5px; transition: background 0.3s; }
-        button:hover { background-color: #555; }
-        .img-container { margin-top: 20px; background: white; padding: 10px; border-radius: 10px; }
-        img { max-height: 50vh; max-width: 100%; object-fit: contain; }
-        .cite { font-size: 1rem; color: #888; font-style: italic; margin-top: 20px; text-align: center; }
+        .reveal h1, .reveal h2, .reveal h3 { color: #4da6ff; text-transform: none; }
+        .reveal p, .reveal li { font-size: 1.2rem; line-height: 1.5; text-align: left; }
+        .reveal .center-text { text-align: center; }
+        .reveal table { margin: 0 auto; border-collapse: collapse; width: 80%; font-size: 1.1rem; }
+        .reveal th { background-color: #333; color: #ff9933; border: 1px solid #555; padding: 10px; }
+        .reveal td { border: 1px solid #555; padding: 10px; text-align: center; }
+        .reveal img { max-height: 500px; border-radius: 8px; }
+        .repo-link { color: #ff9933; font-style: italic; font-size: 1rem; }
+        .highlight { color: #ff9933; font-weight: bold; }
     </style>
 </head>
 <body>
+    <div class="reveal">
+        <div class="slides">
 
-    <div class="slides" id="slide-container">
-        
-        <!-- Slide 1: Title -->
-        <div class="slide">
-            <h1>Adaptive Dynamic Attribute and Rule (ADAR) Framework</h1>
-            <h2>University of Vaasa - Advanced AI</h2>
-            <p style="text-align: center;">Team: Daniel Ebrahimzadeh, Haleh Adab, Amin Sarlak, Muhammad Abuzar</p>
-            <div class="cite">[cite: 1] "A Dynamic Fuzzy Rule and Attribute Management framework for FIS"</div>
-        </div>
+            <!-- Slide 1: Title & Team -->
+            <section>
+                <h2>Reproduction of the ADAR Framework</h2>
+                <h3>University of Vaasa - Advanced AI</h3>
+                <br>
+                <p class="center-text"><strong>Team:</strong></p>
+                <p class="center-text">Daniel Ebrahimzadeh (Lead Architect & Git Control)</p>
+                <p class="center-text">Haleh Adab (Data Engineering)</p>
+                <p class="center-text">Amin Sarlak (Growth/Pruning Optimization)</p>
+                <p class="center-text">Muhammad Abuzar (Metric Analysis)</p>
+                <br>
+                <p class="center-text repo-link">Codebase: github.com/mhe931/ci</p>
+            </section>
 
-        <!-- Slide 2: Problem Definition -->
-        <div class="slide">
-            <h1>The Curse of Dimensionality</h1>
-            <ul>
-                <li>Neuro-Fuzzy Systems (NFS) struggle with high-dimensional datasets.</li>
-                <li>Traditional dimensionality reduction (e.g., PCA) decouples feature selection from inference logic.</li>
-                <li>Fixed rule structures either overfit complex regions or underfit local nuances.</li>
-                <li><strong>The Goal:</strong> A framework that simultaneously learns feature relevance and dynamically adjusts its structural complexity [cite: 1].</li>
-            </ul>
-        </div>
+            <!-- Slide 2: The High-Dimensional Challenge -->
+            <section>
+                <h3>The High-Dimensional Challenge</h3>
+                <ul>
+                    <li>Neuro-Fuzzy Systems suffer from the <span class="highlight">Curse of Dimensionality</span> as rules grow exponentially with features.</li>
+                    <li>During our early analysis, we observed that isolated pre-processing techniques (like PCA) destroy fuzzy interpretability.</li>
+                    <li><strong>Our Focus:</strong> We reproduced the ADAR dual-weighting mechanism to prove that models can actively build and prune their own architectures during gradient descent.</li>
+                </ul>
+            </section>
 
-        <!-- Slide 3: Algorithm Flow -->
-        <div class="slide">
-            <h1>The ADAR Methodology</h1>
-            <ul>
-                <li><strong>K-Means Initialization:</strong> Data-driven anchoring of Gaussian membership functions.</li>
-                <li><strong>Dual-Weighting:</strong> Differentiable importance scores ($\alpha$ for attributes, $\beta$ for rules).</li>
-                <li><strong>Attribute Pruning:</strong> If $\alpha_{l,i} < \theta_{attr}$, the attribute is structurally bypassed.</li>
-                <li><strong>Dynamic Growth:</strong> If validation loss plateaus, a new rule is explicitly anchored at the highest-error coordinate [cite: 1].</li>
-            </ul>
-        </div>
+            <!-- Slide 3: Methodology Flow (Diagram) -->
+            <section>
+                <h3>Methodology Flow</h3>
+                <div style="background: #222; padding: 20px; border-radius: 10px;">
+                    <p class="center-text"><strong>1. Initialization (K-Means)</strong><br>$\downarrow$</p>
+                    <p class="center-text"><strong>2. Forward Pass & Dual Weighting</strong><br>Attribute Masking ($\alpha_{l,i}$) & Rule Scaling ($\beta_l$)<br>$\downarrow$</p>
+                    <p class="center-text"><strong>3. Error Check (Patience Tracker)</strong><br>$\downarrow$</p>
+                    <p class="center-text"><strong>4. Dynamic Growth</strong><br>Spawn new rules at max error coordinates if loss plateaus.</p>
+                </div>
+            </section>
 
-        <!-- Slide 4: Implementation Highlights -->
-        <div class="slide">
-            <h1>Implementation & Validation</h1>
-            <ul>
-                <li>Built entirely in PyTorch using auto-differentiation for dual-weight optimization.</li>
-                <li>Validated against a synthetic 27-feature dataset (Appliances Energy equivalent).</li>
-                <li>Ablation testing proved that dynamic rule growth outperforms static ANFIS architectures while maintaining interpretability (Overlap Index $I_{ov}$ and Position Index $I_{fsp}$).</li>
-            </ul>
-        </div>
-
-        <!-- Slide 5: Hero Chart -->
-        <div class="slide">
-            <h1>Dynamic Rule Growth vs. Loss</h1>
-            <div class="img-container">
+            <!-- Slide 4: The Hero Chart -->
+            <section>
+                <h3>Dynamic Rule Generation vs. Loss</h3>
+                <p class="center-text">Validation loss plateaus triggered the structure manager to spawn new rules.</p>
                 <img src="hero_chart.png" alt="Rule Count vs Loss Chart">
-            </div>
-            <div class="cite">[cite: 1] Empirical demonstration of ADAR validation convergence.</div>
+            </section>
+
+            <!-- Slide 5: Ablation Results (Table) -->
+            <section>
+                <h3>Ablation Results (Appliances Energy)</h3>
+                <p>We ran a direct comparison testing a static structure versus ADAR's plasticity.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model Type</th>
+                            <th>Final Rule Count</th>
+                            <th>RMSE</th>
+                            <th>Overlap Index ($I_{ov}$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Baseline ANFIS (Static)</td>
+                            <td>5 (Fixed)</td>
+                            <td>12.7545</td>
+                            <td>0.9992</td>
+                        </tr>
+                        <tr>
+                            <td>ADAR-ANFIS (Dynamic)</td>
+                            <td>9 (Grown)</td>
+                            <td>16.1324</td>
+                            <td>1.0000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p style="font-size: 1rem;" class="center-text"><em>Note: ADAR accurately identified stagnation and expanded its rule base to 9.</em></p>
+            </section>
+
+            <!-- Slide 6: Key Insights & Limitations -->
+            <section>
+                <h3>Key Insights & Limitations</h3>
+                <ul>
+                    <li><strong>Insights:</strong> We found that coupling the rule growth mechanics directly to validation patience effectively prevents underfitting in complex regions.</li>
+                    <li><strong>Thresholds:</strong> We opted for an attribute pruning threshold of $\theta_{attr} = 0.25$ because it securely isolated dead features while preserving variance.</li>
+                    <li><strong>Limitations:</strong> Hard-pruning an attribute irreversibly blocks its gradient. During our implementation, we observed this can sometimes lock the model out of delayed non-linear interactions. A soft-pruning decay might be a better future extension.</li>
+                </ul>
+            </section>
+
         </div>
-
     </div>
 
-    <div class="controls">
-        <button onclick="prevSlide()">&#9664; Previous</button>
-        <button onclick="nextSlide()">Next &#9654;</button>
-    </div>
-
+    <!-- Reveal.js core JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
     <script>
-        let currentSlide = 0;
-        const totalSlides = 5;
-        const container = document.getElementById('slide-container');
-
-        function updateSlide() {
-            container.style.transform = `translateX(-${currentSlide * 100}vw)`;
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateSlide();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateSlide();
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide'
         });
     </script>
 </body>
