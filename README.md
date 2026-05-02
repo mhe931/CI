@@ -4,8 +4,7 @@ This repository contains the reproduction of the ADAR (Adaptive Dynamic Attribut
 
 ## Contents
 - `adar_anfis.py`: The main PyTorch implementation of the ADAR framework. Includes data synthesis, K-Means initialization, the ADARLayer with dual weighting/pruning, and the StructureManager for dynamic rule scaling.
-- `mathematical_model.md`: Detailed LaTeX breakdown of the core mathematical mechanisms.
-- `report.md`: The final academic report detailing the methodology, results, and critical analysis.
+- `report.docx`: The final academic report detailing the methodology, results, and critical analysis, formatted with the official University template.
 - `plot.py`: Generates the loss curve graph for the report.
 - `loss_curve.png`: The output chart showing training vs. validation loss.
 
