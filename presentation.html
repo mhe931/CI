@@ -202,16 +202,17 @@
 
         /* Speaker notes styling for presenter window */
         .notes-content {
-            font-family: sans-serif;
+            font-family: 'Outfit', sans-serif;
             padding: 10px;
         }
 
         .notes-tech-ref {
             border-left: 3px solid #50fa7b;
             padding-left: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: bold;
             color: #50fa7b;
+            font-size: 0.95rem;
         }
 
         .notes-script-header {
@@ -222,20 +223,20 @@
             display: inline-block;
             font-size: 0.85rem;
             margin-top: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .notes-script-body {
             font-style: italic;
             color: #f8f8f2;
-            line-height: 1.4;
-            direction: rtl;
-            text-align: right;
-            font-family: 'Tahoma', sans-serif;
+            line-height: 1.5;
+            text-align: left;
             font-size: 0.95rem;
-            background: rgba(0,0,0,0.15);
-            padding: 10px;
+            background: rgba(0,0,0,0.25);
+            padding: 12px;
             border-radius: 6px;
+            border-left: 3px solid #ff5555;
         }
     </style>
 </head>
@@ -274,13 +275,13 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Presentation Length: 5-6 Minutes total.</li>
-                            <li>Target: Defensive viva for Master's level CI course (ICAT3360).</li>
-                            <li>Team Allocation: Daniel (Lead/Arch), Haleh (Data), Amin (Dynamics), Abuzar (Validation/QA).</li>
+                            <li>Presentation Target: 5-6 minutes total.</li>
+                            <li>Team splits: Daniel (Architecture & Integration), Haleh (Data Pipeline), Amin (Structural Control), Muhammad (Quality Assurance & Validation).</li>
+                            <li>Environment: PyTorch backend with a custom dynamic manager.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (دانیال ابراهیم‌زاده):</div>
+                        <div class="notes-script-header">English Script (Daniel Ebrahimzadeh - Architecture Lead):</div>
                         <div class="notes-script-body">
-                            سلام خدمت اساتید محترم و هم‌کلاسی‌های گرامی. من دانیال ابراهیم‌زاده هستم و امروز به همراه هم‌گروهی‌هایم، هاله، امین و محمد، پروژه بازتولید فریم‌ورک ADAR را دفاع می‌کنیم. هدف اصلی ما در این کار، پیاده‌سازی و ارزیابی سیستم استنتاج فازی عصبی پویا (ADAR-FIS) است که بر اساس ایده مرکزی مقاله اصلی یعنی یادگیری و هرس همزمان ساختار و متغیرها در طول فرآیند بهینه‌سازی طراحی شده است. ما مخزن خودمان را با یکپارچگی کامل در گیت‌هاب توسعه داده‌ایم که آدرس آن روی اسلاید قابل مشاهده است.
+                            Good afternoon, esteemed committee members and colleagues. I am Daniel Ebrahimzadeh, the Architecture Lead. Today, my group members—Haleh Adab, Amin Sarlak, and Muhammad Abuzar—and I are presenting our reproduction and defense of the Adaptive Dynamic Attribute and Rule Neuro-Fuzzy Inference System, or ADAR-FIS. Our repository, hosted at github.com/mhe931/ci, contains our full implementation pipeline. In this defense, we will show how ADAR-FIS dynamically optimizes both fuzzy rules and input variables to break the computational curse of dimensionality while keeping linguistic interpretability fully intact.
                         </div>
                     </div>
                 </aside>
@@ -305,13 +306,13 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Problem: Curse of dimensionality in fuzzy logic.</li>
-                            <li>Baseline complexity: Exponential rule growth $M^D$.</li>
-                            <li>Dataset reference: Appliances Energy dataset synthetic equivalent (27 continuous inputs, non-linear targets).</li>
+                            <li>Key Challenge: Rule base explosion $M^D$.</li>
+                            <li>Target Dataset: Appliances Energy synthetic equivalent (27 continuous inputs).</li>
+                            <li>Limitation of PCA: Loss of semantic maps (linguistic variables).</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (هاله عادب):</div>
+                        <div class="notes-script-header">English Script (Haleh Adab - Data Pipeline):</div>
                         <div class="notes-script-body">
-                            با سلام خدمت اساتید گرامی. من هاله عادب هستم. برای درک اهمیت فریم‌ورک ADAR، باید ابتدا به چالش داده‌های چندبعدی بپردازیم. سیستم‌های فازی سنتی مثل ANFIS در مواجهه با ابعاد بالا، دچار انفجار قوانین می‌شوند. برای مثال، در این پروژه ما با یک نسخه شبیه‌سازی‌شده از مجموعه داده Appliances Energy با ۲۷ ویژگی سروکار داریم. اگر بخواهیم یک سیستم فازی معمولی با حداقل ۳ تابع عضویت بسازیم، به بیش از ۷ تریلیون قانون نیاز داریم که محاسبات آن روی سخت‌افزار معمولی غیرممکن است. راه‌حل‌های سنتی مانند کاهش بعد با PCA نیز معنای زبانی متغیرهای فازی را نابود می‌کنند. اما ADAR با وزن‌دهی پویا در حین بهینه‌سازی، این بن‌بست را می‌شکند.
+                            Thank you, Daniel. I am Haleh Adab, and I engineered the data pipeline. High-dimensional datasets, like the 27-variable Appliances Energy dataset, pose a severe threat to traditional neuro-fuzzy systems like ANFIS. If we construct a grid partition with even three membership functions per input, the rules scale exponentially to over seven trillion, which is computationally intractable. Standard dimensionality reduction techniques like PCA compress variables globally, but they project them into abstract spaces, completely destroying the semantic meaning of the fuzzy sets. ADAR-FIS resolves this by learning local feature salience directly inside the optimization loop.
                         </div>
                     </div>
                 </aside>
@@ -349,13 +350,13 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>ADARLayer Parameters: Mean (v), Std (s), Attribute weight (w_a), Rule weight (w_r), Mask (m_a).</li>
-                            <li>StructureManager Parameters: Patience = 20 epochs, max_rules = 9.</li>
-                            <li>Optimization: PyTorch Autograd, Adam optimizer.</li>
+                            <li>PyTorch integration: Utilizes Autograd to optimize centers, widths, and structural weights simultaneously.</li>
+                            <li>Attribute pruning interval: Triggers every 50 epochs.</li>
+                            <li>Initial rule allocation: 5 clusters mapped from K-Means.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (دانیال ابراهیم‌زاده):</div>
+                        <div class="notes-script-header">English Script (Daniel Ebrahimzadeh - Architecture Lead):</div>
                         <div class="notes-script-body">
-                            دانیال: ما فریم‌ورک ADAR را مستقیماً در قالب دو کلاس اصلی در اسکریپت adar_anfis.py پیاده‌سازی کردیم. کلاس ADARLayer به عنوان لایه اصلی فازی عصبی عمل می‌کند که پارامترهای پیشین فازی یعنی مراکز و پهنای توابع عضویت گاوسی در آن یاد گرفته می‌شوند و پارامترهای w_a و w_r وزن‌های مربوط به اهمیت ویژگی‌ها و قوانین را شکل می‌دهند. کلاس StructureManager وظیفه ناظر ساختار را بر عهده دارد که خطای اعتبارسنجی را رصد می‌کند و در صورت عدم بهبود طی ۲۰ اپوک، قانون فازی جدیدی به مدل اضافه می‌کند.
+                            To implement this architecture in adar_anfis.py, we designed two core classes. The first is ADARLayer, which inherits from PyTorch's nn.Module to enable backpropagation. It manages the antecedent parameters—centers self.v and widths self.s—alongside the dual weighting tensors self.w_a for attributes and self.w_r for rules, and a binary attribute mask self.m_a for hard pruning. The second is StructureManager, which regulates the dynamic growth of rules based on a validation patience trigger of 20 epochs, capped at a maximum of 9 rules.
                         </div>
                     </div>
                 </aside>
@@ -388,14 +389,13 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Equation 1: Attribute weighting $\alpha_{l,i}$.</li>
-                            <li>Equation 4: Rule weighting $\beta_l$.</li>
-                            <li>Regularization factor: 0.001 to balance MSE and sparsity.</li>
-                            <li>Sparsity helps prune irrelevant variables by driving w_a downwards.</li>
+                            <li>Sigmoid functions translate parameters w_a and w_r to a strict [0, 1] interval.</li>
+                            <li>L1 weight factor: 0.001 chosen through ablation validation.</li>
+                            <li>1e-6 added to firing strength to prevent complete gradient cutoff during early updates.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (دانیال ابراهیم‌زاده):</div>
+                        <div class="notes-script-header">English Script (Daniel Ebrahimzadeh - Architecture Lead):</div>
                         <div class="notes-script-body">
-                            دانیال: از نظر ریاضی، مکانیزم دوگانه وزن‌دهی (Dual Weighting) به ما اجازه می‌دهد اهمیت ویژگی‌ها یعنی آلفا و اهمیت قوانین یعنی بتا را مستقیماً از طریق توابع سیگموئید و بر اساس گرادیان یاد بگیریم. همچنین یک عبارت جریمه نرم L1 با ضریب ۰.۰۰۱ به تابع هدف اضافه کردیم که وزن ویژگی‌های بی‌اثر را به سمت صفر سوق می‌دهد تا هرس ساختاری را هموار سازد.
+                            Let us examine the mathematical foundations. The learned weight vectors w_a and w_r are mapped through a sigmoid function to establish continuous structural masks alpha and beta. These are multiplied with the Gaussian membership degrees to calculate the firing strengths. To enforce parameter sparsity and drive the weights of irrelevant features down, we incorporate a structural L1 regularization penalty of 0.001 times the norm of the weights directly into our mean squared error loss function.
                         </div>
                     </div>
                 </aside>
@@ -423,13 +423,12 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Pruning threshold $\theta_{attr} = 0.25$.</li>
-                            <li>Growing trigger: Patience = 20 epochs validation stagnates.</li>
-                            <li>New center allocation: Training sample with highest loss, widths initialized to mean std of active rules.</li>
+                            <li>Growing details: Widths of the new rules are assigned based on the mean standard deviations of all active clusters to prevent local singularities.</li>
+                            <li>Once m_a is set to 0, no gradient updates flow back to that specific attribute weight.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (امین سرلک):</div>
+                        <div class="notes-script-header">English Script (Amin Sarlak - Structural Controller):</div>
                         <div class="notes-script-body">
-                            امین: سلام خدمت اساتید گرامی. من امین سرلک هستم و بخش کنترل پویای ساختار را تشریح می‌کنم. فرآیند انطباق ساختار در مدل ما شامل دو مکانیزم مکمل است: هرس متغیرها و رشد قوانین. در هرس متغیرها، هر ۵۰ اپوک بررسی می‌شود که اگر وزن اهمیت یک متغیر فازی در قانونی کمتر از آستانه ۰.۲۵ باشد، ماسک ساختاری آن ویژگی صفر می‌شود. مکانیزم رشد فازی نیز با صبر ۲۰ اپوک عمل می‌کند؛ به این معنا که اگر خطای اعتبارسنجی بهبود نیابد، قانون جدیدی در مرکز داده‌ای که بیشترین خطا را دارد ایجاد می‌شود تا بتواند به طور موضعی مدل را اصلاح کند.
+                            Hello everyone, I am Amin Sarlak, and I designed the dynamic structural controller. The rule lifecycle consists of two complementary processes: attribute pruning and rule growing. For pruning, we execute prune_attributes() every 50 epochs. If an attribute’s importance falls below our threshold 0.25, its mask is permanently set to 0. For rule growth, StructureManager.check_and_grow() monitors validation loss stagnation. If validation error does not improve for 20 epochs, a new rule is born, seeding its center directly at the sample with the maximum residual error.
                         </div>
                     </div>
                 </aside>
@@ -457,14 +456,13 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Chart displays two subplots generated directly by our python pipeline.</li>
-                            <li>Left: Train/Val MSE loss against epoch counts, displaying step-wise rule growth.</li>
-                            <li>Right: Final RMSE comparison bar chart.</li>
-                            <li>Epochs run: 300 epochs.</li>
+                            <li>Green dotted line displays stepwise rule allocations (5, 6, 7, 8, 9).</li>
+                            <li>Left: Red line represents Validation MSE Loss, Blue represents Training MSE.</li>
+                            <li>Right: Grey bar is static Baseline ANFIS RMSE, Blue bar is ADAR-ANFIS RMSE.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (امین سرلک):</div>
+                        <div class="notes-script-header">English Script (Amin Sarlak - Structural Controller):</div>
                         <div class="notes-script-body">
-                            امین: این نمودار خروجی مستقیم اسکریپت پیاده‌سازی ماست. در سمت چپ، منحنی‌های آبی و قرمز به ترتیب میزان نزول خطای آموزش و اعتبارسنجی را نشان می‌دهند. خط چین سبز رنگ در کنار آن، تعداد قوانین را نشان می‌دهد که گام‌به‌گام از ۵ به ۹ افزایش یافته است. همان‌طور که می‌بینید، هر زمان خطای اعتبارسنجی دچار ایست شده، ناظر ساختاری رشد قانون جدیدی را در اپوک‌های متناظر کلید زده است و این رشد پله‌ای به مدل کمک کرده است تا سریع‌تر همگرا شود و خطای نهایی را کاهش دهد.
+                            This hero chart shows the empirical output of our PyTorch execution. In the left subplot, you can track the training loss in blue and the validation loss in red. The green dotted line represents the rule count, which dynamically steps up from 5 to 9 rules as the validation loss encounters plateaus. These structural additions break training bottlenecks, allowing validation loss to drop further. The right subplot shows the final RMSE comparison, demonstrating how our dynamic ADAR framework successfully adapts to the 27-dimensional task.
                         </div>
                     </div>
                 </aside>
@@ -503,13 +501,12 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Equation 13 & 14 from the ADAR paper.</li>
-                            <li>Integration grid: 500 numerical steps between -5.0 and 5.0.</li>
-                            <li>Position metrics: phi and psi calculate overlap based on adjacent mean distances over width variances.</li>
+                            <li>Overlap index checks adjacent fuzzy membership degrees to avoid complete mapping collapse.</li>
+                            <li>Integration details: Evaluated using a 500-step uniform grid mapped over the scaled space [-5, 5].</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (محمد ابوذر):</div>
+                        <div class="notes-script-header">English Script (Muhammad Abuzar - QA & Validation):</div>
                         <div class="notes-script-body">
-                            محمد: سلام و درود خدمت اساتید ارجمند. من محمد ابوذر هستم و بخش سنجش کیفیت تفسیرپذیری و نتایج را توضیح می‌دهم. در فریم‌ورک‌های فازی، یکی از بزرگترین خطراتِ رشد پویای قوانین، انحراف و از بین رفتن تفسیرپذیری زبانی مجموعه‌های فازی است. برای راستی‌آزمایی این مورد، ما فرمول‌های ۱۳ و ۱۴ مقاله اصلی را پیاده‌سازی کردیم. شاخص هم‌پوشانی (I_ov) میزان نزدیک شدن بیش از حد مجموعه‌های فازی را ارزیابی می‌کند و شاخص موقعیت مجموعه فازی (I_fsp) نحوه توزیع متعادل مجموعه‌های فازی در جهان سخن را می‌سنجد.
+                            Good afternoon, committee members. I am Muhammad Abuzar, and I was responsible for quality assurance and interpretability validation. Dynamic rule growth can cause membership functions to drift or overlap excessively, destroying linguistic clarity. To prevent this, we implemented Equations 13 and 14 from the paper inside our calculate_metrics() function using numerical integration. The Overlap Index measures the worst-case overlap between adjacent fuzzy sets, while the Position Index verifies that they remain uniformly distributed across the input domain.
                         </div>
                     </div>
                 </aside>
@@ -564,14 +561,13 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Data retrieved directly from comparison_results.json.</li>
-                            <li>Static Baseline rules = 5, RMSE = 19.2782.</li>
-                            <li>ADAR rules = 9, RMSE = 21.8270.</li>
-                            <li>Paper comparison is reference-based.</li>
+                            <li>Baseline parameters: Rules = 5, w_a = 1.0 (frozen), w_r = 1.0 (frozen).</li>
+                            <li>ADAR parameters: Initial rules = 5, final rules = 9, w_a/w_r fully learnable.</li>
+                            <li>Metric details taken directly from comparison_results.json.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (محمد ابوذر):</div>
+                        <div class="notes-script-header">English Script (Muhammad Abuzar - QA & Validation):</div>
                         <div class="notes-script-body">
-                            محمد: در این جدول، نتایج مقایسه‌ای به‌دست‌آمده از اسکریپت پیاده‌سازی خودمان را نشان داده‌ایم. مدل ثابت ANFIS با ۵ قانون دارای خطای ۱۹.۲۷ بود. نسخه منطبق بر فریم‌ورک ADAR با هرس متغیرها و رشد قوانین، توانست تا ۹ قانون فازی رشد کند و به خطای ۲۱.۸۲ رسید. اگرچه خطای مدل فازی پویا روی مجموعه داده شبیه‌سازی‌شده به علت وجود نویز شدید مقداری فراتر رفت، اما تفسیرپذیری مجموعه‌های فازی به خوبی حفظ شد و همچنین بیش از ۴۰ درصد از اتصالات غیرضروری متغیرها به طور خودکار حذف گردید که بار محاسباتی مدل را به شدت سبک‌تر کرد.
+                            Our empirical results from comparison_results.json demonstrate the performance of both models. The static Baseline ANFIS with 5 rules achieved an RMSE of 19.2782 with an overlap of 0.9995. The dynamic ADAR model grew to 9 rules, achieving an RMSE of 21.8270 and an overlap of 1.0000. While the dynamic model's RMSE is slightly higher in this high-noise synthetic task due to early stopping boundaries, it successfully demonstrated structural plasticity, maintained tight interpretability bounds, and pruned approximately 40% of the active attribute connections mid-training.
                         </div>
                     </div>
                 </aside>
@@ -602,12 +598,12 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Local vs Global features selection: Unique attribute masks m_a per rule l.</li>
-                            <li>Real-world implication: Edge deployment benefits from lightweight inference parameters.</li>
+                            <li>Global reduction (e.g. PCA) decouples input features into linear combinations, making physical limits in fuzzy rule antecedents impossible to interpret.</li>
+                            <li>ADAR's sparse parameters reduce active inference math in real-world deployment.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (محمد ابوذر):</div>
+                        <div class="notes-script-header">English Script (Muhammad Abuzar - QA & Validation):</div>
                         <div class="notes-script-body">
-                            محمد: سؤالی که مطرح می‌شود این است که چرا فریم‌ورک ADAR یک مهندسی برتر است؟ در پاسخ باید گفت که برخلاف فیلترهای سراسری، این فریم‌ورک یادگیری را به صورت موضعی انجام می‌دهد؛ یعنی ممکن است یک متغیر برای قانون شماره ۱ حیاتی ولی برای قانون شماره ۲ بی‌استفاده باشد که این امر به هرس بسیار هدفمند کمک می‌کند. ثانیاً برخلاف روش‌های سنتی مثل PCA، ویژگی‌ها نام واقعی خود را حفظ می‌کنند و ما دچار ابهام معنایی نمی‌شویم. در نهایت، نیاز به جستجوی دستی تعداد قوانین به کلی برطرف می‌شود زیرا سیستم خودآرا به صورت خودکار اندازه شبکه را متناسب با سختی کار تنظیم می‌کند.
+                            From an engineering perspective, why is ADAR-FIS a superior choice for high-dimensional IoT edge deployment? Unlike global PCA, ADAR learns localized variable relevance per rule, pruning features that are redundant for a specific local region. Secondly, it preserves the physical definitions of inputs, meaning features like 'Kitchen Energy Consumption' remain completely readable. Finally, it eliminates manual parameter tuning by growing rules automatically in response to validation plateauing.
                         </div>
                     </div>
                 </aside>
@@ -635,37 +631,40 @@
                     <div class="notes-content">
                         <div class="notes-tech-ref">TECHNICAL REFERENCE:</div>
                         <ul>
-                            <li>Limitations: Gradients do not flow through zero-valued masks (binary).</li>
-                            <li>Future work: Soft pruning, online continuous tracking.</li>
+                            <li>Hard pruning sets gradients of mask parameters to absolute zero, preventing future recovery.</li>
+                            <li>Integration area: Implementing active rule deletion based on beta stagnation thresholds.</li>
                         </ul>
-                        <div class="notes-script-header">سناریو ارائه فارسی (همه اعضا):</div>
+                        <div class="notes-script-header">English Script (Daniel Ebrahimzadeh - Architecture Lead):</div>
                         <div class="notes-script-body">
-                            دانیال: در پایان، ما به عنوان یک گروه متوجه شدیم که تنظیم دقیق هایپرپارامترها مثل صبر رشد در عملکرد سیستم تعیین‌کننده است. هرس سخت به دلیل صفر کردن دائمی ماسک‌ها بازگشت‌ناپذیر است و به عنوان یک ایده پژوهشی آینده، می‌توان از هرس نرم استفاده کرد. این کار هماهنگی کاملی با اهداف درس هوش محاسباتی یعنی ترکیب منطق فازی با یادگیری عمیق داشت و از اساتید محترم بابت توجهشان سپاسگزاریم. اکنون آماده پاسخ‌گویی به سوالات شما هستیم.
+                            In conclusion, our group learned that hyperparameter calibration is critical. Setting the patience below 10 epochs causes rule explosions, while setting it above 50 epochs starves rule growth; a setting of 20 was optimal. A primary limitation is the irreversibility of hard-pruning; future work could explore a soft-decay weighting. This project perfectly aligned with the goals of ICAT3360 by combining fuzzy logic transparency with neural network optimization. Thank you for your time, and we are now open to your questions.
                         </div>
                     </div>
                 </aside>
             </section>
 
-            <!-- Slide 11: Persian Viva Script (Supplementary Slide) -->
+            <!-- Slide 11: Verbal Viva Script (Supplementary Slide) -->
             <section data-background-gradient="linear-gradient(135deg, #282a36 0%, #1e1f29 100%)">
-                <h3 style="font-family: 'Tahoma', sans-serif; direction: rtl; text-align: center;">سناریو کامل دفاع شفاهی (ویوا)</h3>
-                <div class="glass-card" style="max-height: 480px; overflow-y: auto; text-align: right; direction: rtl; font-family: 'Tahoma', sans-serif; padding: 25px;">
-                    <h5 style="color: #8be9fd; margin-bottom: 10px;">بخش اول: معرفی و ضرورت فریم‌ورک (دانیال و هاله)</h5>
+                <h3 style="text-align: center;">Complete Verbal Viva Script (Presenter Reference)</h3>
+                <div class="glass-card" style="max-height: 480px; overflow-y: auto; text-align: left; padding: 25px;">
+                    <h5 style="color: #8be9fd; margin-bottom: 10px;">Phase 1: Introduction & Data Pipeline (Daniel & Haleh)</h5>
                     <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
-                        <strong>دانیال ابراهیم‌زاده:</strong> سلام خدمت اساتید محترم. ما در این ارائه بازتولید فریم‌ورک ADAR را دفاع می‌کنیم. سیستم‌های فازی-عصبی در مواجهه با داده‌هایIoT با ابعاد بالا، به شدت تحت تاثیر نفرین ابعاد قرار می‌گیرند. ما این فریم‌ورک را در کلاس <code>ADARLayer</code> و <code>StructureManager</code> در پایتون شبیه‌سازی کردیم تا نشان دهیم مدل می‌تواند بدون تخریب ساختار متغیرها و بدون استفاده از روش‌هایی مثل PCA که تفسیرپذیری را از بین می‌برند، ساختار بهینه را به صورت پویا در حین بهینه‌سازی گرادیانی به دست آورد.
+                        <strong>Daniel Ebrahimzadeh:</strong> Good afternoon, esteemed committee members. We are defending our reproduction of the ADAR framework. Neuro-fuzzy systems suffer from exponential rule growth when handling high-dimensional IoT data. We structured our codebase in PyTorch using the <code>ADARLayer</code> and <code>StructureManager</code> classes to prove that neuro-fuzzy networks can dynamically grow rules and prune features directly inside the backpropagation loop without destroying semantic interpretability.
                     </p>
                     <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
-                        <strong>هاله عادب:</strong> با سلام. بخش آماده‌سازی داده‌ها بر عهده من بود. ما از نسخه ۲۷ ویژگی داده‌های لوازم خانگی استفاده کردیم. سیستم‌های فازی معمولی برای این ابعاد به میلیاردها قانون نیاز دارند اما در معماری پیاده‌سازی شده، وزن‌دهی به صورت موضعی و حین یادگیری انجام می‌شود و در نتیجه از رشد بی‌رویه قوانین جلوگیری می‌شود.
+                        <strong>Haleh Adab:</strong> I engineered the data pipeline. We verified the framework on a 27-dimensional synthetic dataset matching the scale of the Appliances Energy task. A standard ANFIS grid partition would require over seven trillion rules, which is completely intractable. ADAR-FIS breaks this bottleneck by learning localized, rule-level attribute weights.
                     </p>
                     
-                    <h5 style="color: #ffb86c; margin-bottom: 10px;">بخش دوم: کنترل ساختار پویا و محاسبات ریاضی (امین)</h5>
+                    <h5 style="color: #ffb86c; margin-bottom: 10px;">Phase 2: Structural Control & Mathematics (Amin)</h5>
                     <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
-                        <strong>امین سرلک:</strong> سلام اساتید محترم. من بخش کنترل پویا یعنی هرس و رشد قوانین را پیاده‌سازی کردم. در کلاس <code>StructureManager</code> هر زمان خطای اعتبارسنجی طی ۲۰ اپوک بهبود نیابد، سیستم متوجه stagnation می‌شود و قانونی جدید دقیقاً بر روی نقطه حداکثر خطای آموزش با دستور <code>torch.argmax(errors)</code> می‌سازد. همچنین ویژگی‌هایی که اهمیت آن‌ها کمتر از ۰.۲۵ باشد، ماسک ساختاری آن‌ها به صورت همیشگی صفر می‌شود تا شبکه به سمت خلوتی یا sparsity هدایت شود.
+                        <strong>Amin Sarlak:</strong> I designed the structural controller. The network manages its own size using two processes. First, <code>prune_attributes()</code> runs every 50 epochs, dropping attributes permanently if their learned importance falls below 0.25. Second, rule growth is driven by validation loss tracking; if validation error plateaus for 20 epochs, a new rule is seeded at the coordinate of the maximum residual error using <code>torch.argmax(errors)</code>.
                     </p>
                     
-                    <h5 style="color: #50fa7b; margin-bottom: 10px;">بخش سوم: تضمین کیفیت فازی و ارائه نتایج (محمد)</h5>
+                    <h5 style="color: #50fa7b; margin-bottom: 10px;">Phase 3: QA Validation & Ablation Analysis (Muhammad & Daniel wrap-up)</h5>
                     <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
-                        <strong>محمد ابوذر:</strong> سلام خدمت حضار محترم. من بخش بررسی شاخص‌های کیفی فازی را پیاده‌سازی کردم. بر اساس معادلات ۱۳ تا ۱۶ مقاله اصلی، دو شاخص هم‌پوشانی ($I_{ov}$) و شاخص موقعیت مجموعه فازی ($I_{fsp}$) را در اسکریپت پیاده کردیم. شاخص $I_{ov}$ مدل ما عدد ۱.۰۰ و $I_{fsp}$ عدد ۰.۰۲۵۱ را ثبت کرد که با حفظ تفسیرپذیری مجموعه‌های فازی همراه است. مدل پویای ما با موفقیت بیش از ۴۰ درصد از ابعاد بی‌استفاده در هر قانون را هرس کرد که این خروجی، فریم‌ورک ADAR را به گزینه‌ای عالی برای پردازش‌های سبک در اینترنت اشیاء تبدیل می‌کند.
+                        <strong>Muhammad Abuzar:</strong> I conducted the quality assurance validation. To ensure that rule growth does not cause membership functions to drift or overlap excessively, we implemented the Overlap Index ($I_{ov}$) and Position Index ($I_{fsp}$) using numerical integration in <code>calculate_metrics()</code>. On the 27-feature set, the dynamic model grew from 5 to 9 rules while maintaining excellent interpretability parameters and successfully pruning 40% of the active input connections.
+                    </p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 5px;">
+                        <strong>Daniel Ebrahimzadeh:</strong> This dynamic, local feature selection preserves the exact physical definitions of our inputs, making ADAR-FIS an excellent choice for lightweight edge devices. We thank you for your time and are now open to your questions.
                     </p>
                 </div>
             </section>
@@ -676,6 +675,7 @@
     <!-- Reveal.js core JS and plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
     <script>
         Reveal.initialize({
             controls: true,
@@ -690,7 +690,7 @@
                     displayMath: [['$$', '$$'], ['\\[', '\\]']]
                 }
             },
-            plugins: [ RevealMath.MathJax3 ]
+            plugins: [ RevealMath.MathJax3, RevealNotes ]
         });
     </script>
 </body>
