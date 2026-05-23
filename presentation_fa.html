@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +10,8 @@
     <!-- Using Dracula base theme for premium dark aesthetic -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css">
     <!-- Google Fonts Vazirmatn & JetBrains Mono -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --r-main-font: 'Vazirmatn', sans-serif;
@@ -23,19 +20,16 @@
             --r-link-color: #ff5555;
             --r-selection-background: #ff5555;
         }
-
-        .reveal h1,
-        .reveal h2,
-        .reveal h3,
-        .reveal h4 {
+        
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
             color: #ffffff;
             text-transform: none;
             font-weight: 700;
             letter-spacing: -0.02em;
-            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
             font-family: 'Vazirmatn', sans-serif;
         }
-
+        
         .reveal h3 {
             color: #ff5555;
             margin-bottom: 25px;
@@ -45,8 +39,7 @@
             display: inline-block;
         }
 
-        .reveal p,
-        .reveal li {
+        .reveal p, .reveal li {
             font-size: 1.15rem;
             line-height: 1.7;
             color: #f8f8f2;
@@ -54,16 +47,15 @@
             font-family: 'Vazirmatn', sans-serif;
         }
 
-        .reveal ul,
-        .reveal ol {
+        .reveal ul, .reveal ol {
             margin-right: 1.8em;
             margin-left: 0;
         }
-
+        
         .reveal .center-text {
             text-align: center;
         }
-
+        
         /* Glassmorphism Container styling */
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
@@ -83,7 +75,7 @@
             gap: 20px;
             margin-top: 15px;
         }
-
+        
         .tech-card {
             background: rgba(0, 0, 0, 0.3);
             border-right: 4px solid #ff5555;
@@ -119,7 +111,6 @@
             gap: 15px;
             margin: 25px 0;
             direction: ltr;
-            /* Keeps demo boxes in order */
         }
 
         .prune-box {
@@ -130,7 +121,7 @@
             font-family: 'Vazirmatn', sans-serif;
             font-size: 0.95rem;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             text-align: center;
         }
 
@@ -163,19 +154,18 @@
             color: #ff5555;
             text-decoration: line-through;
         }
-
+        
         /* Table styling */
         .reveal table {
             margin: 15px auto;
             border-collapse: collapse;
             width: 100%;
             font-size: 0.95rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             border-radius: 8px;
             overflow: hidden;
             direction: rtl;
         }
-
         .reveal th {
             background-color: #6272a4;
             color: #ffffff;
@@ -184,29 +174,27 @@
             font-weight: 600;
             font-family: 'Vazirmatn', sans-serif;
         }
-
         .reveal td {
             border: 1px solid #44475a;
             padding: 12px 15px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0,0,0,0.2);
             font-family: 'Vazirmatn', sans-serif;
         }
-
         .reveal tr:nth-child(even) td {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255,255,255,0.02);
         }
-
+        
         /* Hero Chart formatting */
         .chart-container {
             background: #ffffff;
             padding: 10px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             max-width: 90%;
             margin: 0 auto;
         }
-
+        
         .chart-container img {
             max-height: 450px;
             margin: 0 !important;
@@ -224,56 +212,13 @@
             direction: ltr;
             display: inline-block;
         }
-
+        
         .repo-link:hover {
             color: #50fa7b !important;
             border-bottom-color: #50fa7b;
         }
-
-        /* Speaker notes styling for presenter window */
-        .notes-content {
-            font-family: 'Vazirmatn', sans-serif;
-            padding: 10px;
-            direction: rtl;
-            text-align: right;
-        }
-
-        .notes-tech-ref {
-            border-right: 3px solid #50fa7b;
-            border-left: none;
-            padding-right: 10px;
-            margin-bottom: 12px;
-            font-weight: bold;
-            color: #50fa7b;
-            font-size: 0.95rem;
-        }
-
-        .notes-script-header {
-            background: #6272a4;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            display: inline-block;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .notes-script-body {
-            font-style: normal;
-            color: #f8f8f2;
-            line-height: 1.6;
-            font-size: 0.95rem;
-            background: rgba(0, 0, 0, 0.25);
-            padding: 12px;
-            border-radius: 6px;
-            border-right: 3px solid #ff5555;
-            border-left: none;
-        }
     </style>
 </head>
-
 <body>
     <div class="reveal">
         <div class="slides">
@@ -281,8 +226,7 @@
             <!-- Slide 1: Cover Page -->
             <section data-background-gradient="linear-gradient(135deg, #1e1f29 0%, #282a36 100%)">
                 <h2>چارچوب هوشمند فازی ADAR</h2>
-                <h4 style="color: #ffb86c; font-weight: 400; margin-bottom: 30px;">مدیریت خودکار و پویای قوانین و
-                    متغیرها در سیستم‌های فازی-عصبی</h4>
+                <h4 style="color: #ffb86c; font-weight: 400; margin-bottom: 30px;">مدیریت خودکار و پویای قوانین و متغیرها در سیستم‌های فازی-عصبی</h4>
                 <div class="glass-card">
                     <p class="center-text" style="font-size: 1.1rem; color: #8be9fd; margin-bottom: 15px;">
                         <strong>دفاع از پروژه پایانی درس هوش محاسباتی (ICAT3360)</strong>
@@ -290,19 +234,14 @@
                     <p class="center-text" style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px;">
                         دانشگاه واسا (University of Vaasa)
                     </p>
-                    <div
-                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
                         <div>
-                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>دنیل
-                                    ابراهیم‌زاده</strong> (مدیر فنی و معماری)</p>
-                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>هاله ادب</strong>
-                                (مدیر آماده‌سازی داده‌ها)</p>
+                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>دانیال ابراهیم‌زاده</strong> (مدیر فنی و معماری)</p>
+                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>هاله عادب</strong> (مدیر آماده‌سازی داده‌ها)</p>
                         </div>
                         <div>
-                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>امین سرلک</strong>
-                                (طراح سیستم رشد و هرس)</p>
-                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>محمد ابوذر</strong>
-                                (کنترل کیفیت و تحلیل نتایج)</p>
+                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>امین سرلک</strong> (طراح سیستم رشد و هرس)</p>
+                            <p style="font-size: 0.95rem; text-align: right; margin: 2px 0;"><strong>محمد ابوذر</strong> (کنترل کیفیت و تحلیل نتایج)</p>
                         </div>
                     </div>
                 </div>
@@ -312,21 +251,15 @@
 
                 <!-- Speaker Notes Slide 1 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (دنیل ابراهیم‌زاده):</div>
-                        <ul>
-                            <li>هدف این اسلاید: خوش‌آمدگویی و معرفی اعضای گروه و پروژه.</li>
-                            <li>زبان: فارسی روان، ساده و بسیار شیوا.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (دانیال ابراهیم‌زاده):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> خوش‌آمدگویی، معرفی اعضای گروه، وظایف هر فرد و معرفی کلی پروژه.</li>
+                            <li><strong>زبان:</strong> صمیمی، شیوا و بسیار ساده.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            سلام و وقت بخیر خدمت اساتید و بزرگواران. من دنیل ابراهیم‌زاده هستم و امروز به همراه
-                            هم‌گروهی‌های عزیزم، هاله، امین و محمد، می‌خواهیم یک پروژه هیجان‌انگیز در زمینه هوش مصنوعی و
-                            منطق فازی را خدمت شما ارائه کنیم. موضوع پروژه ما پیاده‌سازی و بازتولید یک فریم‌ورک هوشمند به
-                            نام ADAR است. به زبان ساده، ما سیستمی ساخته‌ایم که می‌تواند در مواجهه با کوهی از داده‌های
-                            پیچیده، خودش تصمیم بگیرد کدام اطلاعات مهم هستند و کدام‌ها بی‌استفاده‌اند و بر این اساس،
-                            ساختار خودش را به طور خودکار تنظیم و بهینه کند. تمام کدهای ما روی آدرس گیت‌هاب که پایین
-                            اسلاید می‌بینید به صورت کامل بارگذاری شده است.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            سلام و وقت بخیر خدمت اساتید بزرگوار و هم‌کلاسی‌های گرامی. من دانیال ابراهیم‌زاده هستم و امروز به همراه هم‌گروهی‌های عزیزم، هاله، امین و محمد، پروژه بازتولید فریم‌ورک فازی ADAR را خدمت شما دفاع می‌کنیم. به زبان خیلی ساده، ما در این پروژه سیستمی طراحی کرده‌ایم که می‌تواند خودش متغیرها و اطلاعات اضافی و بی‌استفاده را هرس و فیلتر کند و قوانین جدید را به طور پویا متناسب با پیچیدگی داده‌ها بسازد. در این دفاع، ما به نوبت بخش‌های مختلف آماده‌سازی داده، پیاده‌سازی ریاضی، مکانیزم رشد و هرس، و در نهایت تحلیل نتایج را تشریح خواهیم کرد. تمام کدهای پروژه به همراه مستندات آن روی گیت‌هاب ما فعال و در دسترس است.
                         </div>
                     </div>
                 </aside>
@@ -337,39 +270,26 @@
                 <h3>چالش بزرگ: وقتی داده‌ها بیش از حد زیاد می‌شوند!</h3>
                 <div class="glass-card">
                     <p style="margin-bottom: 15px; text-align: right;">
-                        سیستم‌های فازی سنتی مثل ANFIS شبیه به یک جعبه قوانین تصمیم‌گیری بر اساس روابط منطقی «اگر...
-                        آنگاه...» کار می‌کنند. اما وقتی با داده‌های بزرگ مثل **اطلاعات مصرف انرژی یک خانه هوشمند با ۲۷
-                        ویژگی مختلف** مواجه می‌شویم، سیستم دچار انفجار محاسباتی می‌شود:
+                        سیستم‌های فازی سنتی مثل ANFIS شبیه به یک جعبه قوانین تصمیم‌گیری بر اساس روابط منطقی «اگر... آنگاه...» کار می‌کنند. اما وقتی با داده‌های بزرگ مثل **اطلاعات مصرف انرژی یک خانه هوشمند با ۲۷ ویژگی مختلف** مواجه می‌شویم، سیستم دچار انفجار محاسباتی می‌شود:
                     </p>
                     <ul style="direction: rtl;">
-                        <li><strong>انفجار نمایی قوانین:</strong> اگر فقط ۲۷ متغیر ورودی داشته باشیم و برای هر کدام تنها
-                            ۳ حالت (مثلاً کم، متوسط، زیاد) تعریف کنیم، تعداد قوانین به عدد وحشتناک <strong>۷ تریلیون
-                                قانون</strong> می‌رسد! پردازش این حجم از قوانین روی هیچ کامپیوتری ممکن نیست.</li>
-                        <li><strong>ضعف روش‌های قدیمی:</strong> روش‌های سنتی مثل PCA ویژگی‌ها را با هم ترکیب و فشرده
-                            می‌کنند، اما متاسفانه معنی زبانی ویژگی‌ها را از بین می‌برند (مثلاً متغیر دمای خانه به یک کد
-                            عددی بی‌معنی تبدیل می‌شود).</li>
-                        <li><strong>راه‌حل چارچوب ADAR:</strong> این سیستم در طول آموزش یاد می‌گیرد که متغیرهای
-                            بی‌استفاده را برای تک‌تک قوانین هرس (حذف) کند تا نیازی به ساخت قوانین اضافی نباشد.</li>
+                        <li><strong>انفجار نمایی قوانین:</strong> اگر فقط ۲۷ متغیر ورودی داشته باشیم و برای هر کدام تنها ۳ حالت (مثلاً کم، متوسط، زیاد) تعریف کنیم، تعداد قوانین به عدد وحشتناک <strong>۷ تریلیون قانون</strong> می‌رسد! پردازش این حجم از قوانین روی هیچ کامپیوتری ممکن نیست.</li>
+                        <li><strong>ضعف روش‌های قدیمی:</strong> روش‌های سنتی مثل PCA ویژگی‌ها را با هم ترکیب و فشرده می‌کنند، اما متاسفانه معنی زبانی ویژگی‌ها را از بین می‌برند (مثلاً متغیر دمای خانه به یک کد عددی بی‌معنی تبدیل می‌شود).</li>
+                        <li><strong>راه‌حل چارچوب ADAR:</strong> این سیستم در طول آموزش یاد می‌گیرد که متغیرهای بی‌استفاده را برای تک‌تک قوانین هرس (حذف) کند تا نیازی به ساخت قوانین اضافی نباشد.</li>
                     </ul>
                 </div>
 
                 <!-- Speaker Notes Slide 2 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (هاله ادب):</div>
-                        <ul>
-                            <li>مفهوم کلیدی: نفرین ابعاد (Curse of Dimensionality) در سیستم‌های فازی.</li>
-                            <li>مثال ساده: داده‌های مصرف برق خانه هوشمند با ۲۷ متغیر مختلف.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (هاله عادب):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> باز کردن مفهوم چالش ابعاد بالا (نفرین ابعاد) و ضعف مدل‌های سنتی به زبان کاملاً ملموس.</li>
+                            <li><strong>زبان:</strong> ساده، با مثال خانه هوشمند.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            با سلام خدمت اساتید گرامی. من هاله ادب هستم. برای اینکه بدانیم چرا به چارچوب ADAR نیاز
-                            داریم، بگذارید یک مثال ساده بزنم. فرض کنید می‌خواهید مصرف برق یک خانه هوشمند را بر اساس ۲۷
-                            فاکتور مختلف مثل دمای اتاق‌ها، رطوبت هوا، وضعیت لامپ‌ها و غیره پیش‌بینی کنید. اگر بخواهیم یک
-                            سیستم فازی معمولی بسازیم، به تریلیون‌ها قانون نیاز داریم که عملاً سیستم قفل می‌شود! روش‌های
-                            سنتی کاهش بعد هم فاکتورها را با هم ترکیب می‌کنند و دیگر نمی‌فهمیم که سیستم بر اساس چه
-                            فاکتوری تصمیم گرفته است. اما چارچوب ADAR طوری طراحی شده که متغیرهای اضافی را فیلتر می‌کند تا
-                            سیستم هم بسیار سبک شود و هم کاملاً قابل درک باقی بماند.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            با سلام خدمت اساتید گرامی. من هاله عادب هستم و بخش خط لوله داده را مدیریت کردم. برای اینکه بدانیم نوآوری ADAR چیست، بگذارید با یک چالش شروع کنیم. فرض کنید می‌خواهیم مصرف برق یک خانه را بر اساس ۲۷ ویژگی پیش‌بینی کنیم. در سیستم‌های فازی قدیمی مثل ANFIS، تعداد قوانین با افزایش ابعاد به صورت نمایی رشد می‌کند؛ یعنی اگر بخواهیم یک سیستم فازی معمولی با ۲۷ متغیر بسازیم به ۷ تریلیون قانون نیاز داریم که هیچ سیستمی قادر به اجرای آن نیست! از طرفی روش‌هایی مثل فشرده‌سازی با PCA هم شفافیت تصمیمات را نابود می‌کنند. اما چارچوب ADAR با یادگیری موضعی اهمیت متغیرها در هر قانون فازی، این مشکل را حل می‌کند.
                         </div>
                     </div>
                 </aside>
@@ -381,51 +301,36 @@
                 <div class="tech-grid">
                     <div class="tech-card">
                         <h4>۱. کلاس محاسبات فازی (ADARLayer)</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 5px;">این کلاس قلب محاسباتی سیستم ماست که روابط
-                            فازی را ارزیابی می‌کند.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.v</code>, <code>self.s</code>: موقعیت و
-                            پهنای توابع فازی را ذخیره می‌کنند.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.w_a</code>, <code>self.w_r</code>:
-                            پارامترهایی برای یادگیری اهمیت ویژگی‌ها و قوانین هستند.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>prune_attributes()</code>: متغیرهای
-                            بی‌استفاده را شناسایی و حذف می‌کند.</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">این کلاس قلب محاسباتی سیستم ماست که روابط فازی را ارزیابی می‌کند.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.v</code>, <code>self.s</code>: موقعیت و پهنای توابع فازی را ذخیره می‌کنند.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.w_a</code>, <code>self.w_r</code>: پارامترهایی برای یادگیری اهمیت ویژگی‌ها و قوانین هستند.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>prune_attributes()</code>: متغیرهای بی‌استفاده را شناسایی و حذف می‌کند.</p>
                     </div>
                     <div class="tech-card" style="border-right-color: #50fa7b;">
                         <h4>۲. کلاس مدیریت ساختار (StructureManager)</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 5px;">این کلاس شبیه به یک ناظر هوشمند، ساختار شبکه
-                            فازی را کنترل می‌کند.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>patience = 20</code>: تعداد دورهای تمرینی
-                            (اپوک) بدون بهبود خطا برای رشد قانون جدید.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>max_rules = 9</code>: سقف مجاز برای رشد
-                            قوانین جهت جلوگیری از شلوغی شبکه.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>check_and_grow()</code>: در صورت نیاز، قوانین
-                            جدید ایجاد می‌کند.</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">این کلاس شبیه به یک ناظر هوشمند، ساختار شبکه فازی را کنترل می‌کند.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>patience = 20</code>: تعداد دورهای تمرینی (اپوک) بدون بهبود خطا برای رشد قانون جدید.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>max_rules = 9</code>: سقف مجاز برای رشد قوانین جهت جلوگیری از شلوغی شبکه.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>check_and_grow()</code>: در صورت نیاز، قوانین جدید ایجاد می‌کند.</p>
                     </div>
                 </div>
                 <div class="glass-card" style="margin-top: 15px; padding: 10px 20px;">
                     <p style="font-size: 0.95rem; text-align: center; margin: 0; direction: rtl;">
-                        <strong>مراحل اجرای الگوریتم:</strong> خوشه‌بندی اولیه داده‌ها $\rightarrow$ محاسبه خروجی فازی
-                        $\rightarrow$ اعمال جریمه ریاضی برای متغیرها $\rightarrow$ هرس ویژگی‌های بی‌استفاده
-                        $\rightarrow$ ایجاد قوانین جدید در صورت درجا زدن خطا
+                        <strong>مراحل اجرای الگوریتم:</strong> خوشه‌بندی اولیه داده‌ها $\rightarrow$ محاسبه خروجی فازی $\rightarrow$ اعمال جریمه ریاضی برای متغیرها $\rightarrow$ هرس ویژگی‌های بی‌استفاده $\rightarrow$ ایجاد قوانین جدید در صورت درجا زدن خطا
                     </p>
                 </div>
 
                 <!-- Speaker Notes Slide 3 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (دنیل ابراهیم‌زاده):</div>
-                        <ul>
-                            <li>توضیح ساده کلاس‌های ADARLayer و StructureManager در کد adar_anfis.py.</li>
-                            <li>مفهوم ساده خوشه‌بندی اولیه (K-Means) و تبدیل آن به قوانین فازی.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (دانیال ابراهیم‌زاده):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> پیوند دادن فرمول‌ها با کدهای پایتون در فایل adar_anfis.py به صورت ملموس.</li>
+                            <li><strong>نکته کلیدی:</strong> چطور کلاس‌ها با هم ارتباط دارند.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            دنیل: ما تمام منطق این چارچوب را در دو کلاس پایتون پیاده‌سازی کرده‌ایم. کلاس اول ADARLayer
-                            نام دارد که نقش محاسباتی دارد؛ یعنی مقادیر فازی را بر اساس ورودی‌ها حساب می‌کند و متغیرها را
-                            وزن‌دهی می‌کند. کلاس دوم StructureManager نام دارد که نقش یک ناظر هوشمند را بازی می‌کند. این
-                            ناظر خطای اعتبارسنجی مدل را رصد می‌کند؛ اگر خطای مدل بعد از ۲۰ دور بهبود پیدا نکند، بلافاصله
-                            متوجه می‌شود که مدل برای یادگیری ضعیف است و یک قانون فازی جدید در پرخطاترین نقطه داده
-                            می‌سازد تا سیستم قوی‌تر شود.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            دانیال: ما این ایده پژوهشی را در قالب دو کلاس اصلی پایتون در فایل adar_anfis.py پیاده‌سازی کردیم. کلاس اول ADARLayer است که تمام کارهای محاسباتی فازی یعنی ارزیابی توابع عضویت گاوسی بر اساس میانگین و پهنا، وزن‌دهی ویژگی‌ها با w_a و قوانین با w_r را انجام می‌دهد و همچنین متغیرها را هرس می‌کند. کلاس دوم StructureManager است که به عنوان ناظر هوشمند سیستم کار می‌کند. این ناظر خطای اعتبارسنجی را پایش می‌کند؛ هرگاه ببیند خطا به مدت ۲۰ دور تغییر نکرده و اصطلاحاً به بن‌بست رسیده، با افزودن پله‌ای قانون فازی جدید در پرخطاترین نقطه داده، ساختار مدل را گسترش می‌دهد تا همگرایی بهبود یابد.
                         </div>
                     </div>
                 </aside>
@@ -436,48 +341,34 @@
                 <h3>فرمول‌های ریاضی سیستم به زبان ساده</h3>
                 <div class="glass-card">
                     <div style="font-size: 1rem; text-align: right; line-height: 1.8; direction: rtl;">
-                        <p style="margin-bottom: 10px;"><strong>۱. مکانیزم وزن‌دهی سیگموئیدی:</strong> مدل وزن‌های
-                            یادگرفته شده برای متغیرها ($\alpha$) و کل قوانین ($\beta$) را بین ۰ تا ۱ نگاشت می‌کند:</p>
-                        <div class="center-text"
-                            style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd; direction: ltr;">
-                            \[ \alpha_{l,i} = \sigma(w_{a,l,i}) \cdot m_{l,i} \quad \text{و} \quad \beta_l =
-                            \sigma(w_{r,l}) \]
+                        <p style="margin-bottom: 10px;"><strong>۱. مکانیزم وزن‌دهی سیگموئیدی:</strong> مدل وزن‌های یادگرفته شده برای متغیرها ($\alpha$) و کل قوانین ($\beta$) را بین ۰ تا ۱ نگاشت می‌کند:</p>
+                        <div class="center-text" style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd; direction: ltr;">
+                            \[ \alpha_{l,i} = \sigma(w_{a,l,i}) \cdot m_{l,i} \quad \text{و} \quad \beta_l = \sigma(w_{r,l}) \]
+                        </div>
+                        
+                        <p style="margin-bottom: 10px;"><strong>۲. محاسبه قدرت فعال‌سازی قوانین:</strong> در هر قانون، درجات عضویت متغیرها با توجه به اهمیتشان ضرب می‌شوند تا میزان فعال شدن قانون مشخص شود:</p>
+                        <div class="center-text" style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd; direction: ltr;">
+                            \[ f_l(\mathbf{x}) = \prod_{i=1}^D \left( \mu_{l,i}(x_i) \cdot \alpha_{l,i} + 10^{-6} \right) \]
                         </div>
 
-                        <p style="margin-bottom: 10px;"><strong>۲. محاسبه قدرت فعال‌سازی قوانین:</strong> در هر قانون،
-                            درجات عضویت متغیرها با توجه به اهمیتشان ضرب می‌شوند تا میزان فعال شدن قانون مشخص شود:</p>
-                        <div class="center-text"
-                            style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd; direction: ltr;">
-                            \[ f_l(\mathbf{x}) = \prod_{i=1}^D \left( \mu_{l,i}(x_i) \cdot \alpha_{l,i} + 10^{-6}
-                            \right) \]
-                        </div>
-
-                        <p style="margin-bottom: 10px;"><strong>۳. اعمال جریمه ریاضی برای هرس (خلوت‌سازی مدل):</strong>
-                            اضافه کردن یک جریمه ریاضی برای متغیرها تا سیستم ترغیب شود ویژگی‌های اضافی را سریع‌تر حذف
-                            کند:</p>
+                        <p style="margin-bottom: 10px;"><strong>۳. اعمال جریمه ریاضی برای هرس (خلوت‌سازی مدل):</strong> اضافه کردن یک جریمه ریاضی برای متغیرها تا سیستم ترغیب شود ویژگی‌های اضافی را سریع‌تر حذف کند:</p>
                         <div class="center-text" style="font-size: 1.25rem; color: #50fa7b; direction: ltr;">
-                            \[ \mathcal{L}_{total} = \text{MSE} + 0.001 \times \left( \sum_{l,i} |w_{a,l,i}| + \sum_l
-                            |w_{r,l}| \right) \]
+                            \[ \mathcal{L}_{total} = \text{MSE} + 0.001 \times \left( \sum_{l,i} |w_{a,l,i}| + \sum_l |w_{r,l}| \right) \]
                         </div>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 4 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (دنیل ابراهیم‌زاده):</div>
-                        <ul>
-                            <li>توضیح ساده فرمول‌ها بدون غرق شدن در ریاضیات پیچیده.</li>
-                            <li>مفهوم هرس و جریمه L1 (Sparsity) به زبان بسیار ساده.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (دانیال ابراهیم‌زاده):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> شکستن ترس از فرمول‌ها و توضیح منطق زبانی ریاضیات.</li>
+                            <li><strong>تاکید بر:</strong> جریمه L1 برای سبک‌سازی مدل.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            دنیل: اساتید محترم، ممکن است فرمول‌های ریاضی روی اسلاید پیچیده به نظر برسند، اما منطق آن‌ها
-                            بسیار ساده است! ما از تابع سیگموئید استفاده کردیم تا اهمیت ویژگی‌ها را به عددی بین ۰ تا ۱
-                            تبدیل کنیم. متغیری که اهمیتش به صفر نزدیک شود، یعنی بی‌اثر است. همچنین، ما یک جریمه ریاضی به
-                            نام Regularization به فرآیند آموزش اضافه کردیم. این جریمه شبیه به جریمه مالیاتی برای
-                            متغیرهای اضافی کار می‌کند! سیستم برای اینکه جریمه کمتری بپردازد، خودش داوطلبانه ویژگی‌های
-                            بی‌استفاده را حذف و هرس می‌کند تا خروجی نهایی بسیار خلوت و سریع باشد.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            دانیال: از نظر ریاضی، مکانیزم وزن‌دهی ما بسیار جالب است. ما وزن‌های خامی که مدل یاد می‌گیرد را از تابع سیگموئید رد می‌کنیم تا به عددی تمیز بین ۰ تا ۱ برسیم. اهمیت ویژگی‌ها یعنی آلفا و قوانین یعنی بتا از این طریق به دست می‌آیند. برای اینکه بتوانیم ویژگی‌های بی‌استفاده را حذف کنیم، یک جریمه ریاضی یا L1 Regularization با ضریب ریزِ ۰.۰۰۱ به تابع خطای شبکه اضافه کردیم. این جریمه شبیه به یک هول‌دهنده عمل می‌کند که متغیرهای کم‌اثر را تشویق می‌کند تا اهمیتشان سریع‌تر به سمت صفر کاهش یابد و هرس شوند.
                         </div>
                     </div>
                 </aside>
@@ -485,46 +376,32 @@
 
             <!-- Slide 5: Dynamic Rule Lifecycle (Pruning & Growing) -->
             <section>
-                <h3>چرخه زندگی قوانین فازی: هرس و رشد پویای مدل</h3>
+                <h3>Rule Lifecycle: Dynamic Pruning & Growing</h3>
                 <div class="glass-card">
-                    <p style="margin-bottom: 10px; text-align: right;">مدل فازی ما یک ساختار صلب و مرده نیست؛ بلکه در
-                        طول آموزش کاملاً زنده تغییر می‌کند:</p>
+                    <p style="margin-bottom: 10px; text-align: right;">مدل فازی ما یک ساختار صلب و مرده نیست؛ بلکه در طول آموزش کاملاً زنده تغییر می‌کند:</p>
                     <ol style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; direction: rtl;">
-                        <li class="fragment" data-fragment-index="1"><strong>مکانیزم هرس (حذف اضافی‌ها):</strong> سیستم
-                            هر ۵۰ دور آموزش، ویژگی‌هایی که اهمیت آن‌ها کمتر از ۰.۲۵ است را شناسایی کرده و ماسک آن‌ها را
-                            صفر می‌کند تا برای همیشه خاموش شوند.</li>
-                        <li class="fragment" data-fragment-index="2"><strong>مکانیزم رشد (افزودن قوانین جدید):</strong>
-                            هر زمان خطای مدل به مدت ۲۰ دور متوقف شد، یک قانون جدید دقیقاً در پرخطاترین نقطه داده متولد
-                            می‌شود تا جبران خطا کند.</li>
+                        <li class="fragment" data-fragment-index="1"><strong>مکانیزم هرس (حذف اضافی‌ها):</strong> سیستم هر ۵۰ دور آموزش، ویژگی‌هایی که اهمیت آن‌ها کمتر از ۰.۲۵ است را شناسایی کرده و ماسک آن‌ها را صفر می‌کند تا برای همیشه خاموش شوند.</li>
+                        <li class="fragment" data-fragment-index="2"><strong>مکانیزم رشد (افزودن قوانین جدید):</strong> هر زمان خطای مدل به مدت ۲۰ دور متوقف شد، یک قانون جدید دقیقاً در پرخطاترین نقطه داده متولد می‌شود تا جبران خطا کند.</li>
                     </ol>
-
+                    
                     <div class="prune-container">
-                        <div class="prune-box">ویژگی شماره ۱<br>$\alpha = 0.85$<span class="status-active">✓ فعال و
-                                مهم</span></div>
-                        <div class="prune-box fragment pruned" data-fragment-index="3">ویژگی شماره ۲<br>$\alpha =
-                            0.12$<span class="status-pruning">⚠ هرس شد!</span></div>
-                        <div class="prune-box">ویژگی شماره ۳<br>$\alpha = 0.90$<span class="status-active">✓ فعال و
-                                مهم</span></div>
+                        <div class="prune-box">ویژگی شماره ۱<br>$\alpha = 0.85$<span class="status-active">✓ فعال و مهم</span></div>
+                        <div class="prune-box fragment pruned" data-fragment-index="3">ویژگی شماره ۲<br>$\alpha = 0.12$<span class="status-pruning">⚠ هرس شد!</span></div>
+                        <div class="prune-box">ویژگی شماره ۳<br>$\alpha = 0.90$<span class="status-active">✓ فعال و مهم</span></div>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 5 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (امین سرلک):</div>
-                        <ul>
-                            <li>توضیح تصویری فرآیند هرس (Pruning) و رشد (Growing).</li>
-                            <li>تاکید بر اینکه هرس متغیرها در طول آموزش به صورت کاملاً خودکار رخ می‌دهد.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (امین سرلک):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> باز کردن فرآیندهای رشد و هرس با انیمیشن ساده.</li>
+                            <li><strong>شبیه سازی:</strong> با فعال شدن انیمیشن، ویژگی ۲ به حالت خاکستری و ضربدری می‌رود.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            امین: سلام خدمت اساتید گرامی. من امین سرلک هستم. بخش پویایی ساختار مدل که کار بسیار جذابی
-                            است را خدمت شما تشریح می‌کنم. سیستم ما در طول آموزش، دو کار بسیار مهم انجام می‌دهد. اول
-                            اینکه هر ۵۰ دور، تمام ویژگی‌ها را چک می‌کند؛ اگر ببیند ویژگی شماره ۲ اهمیتش به خاطر جریمه به
-                            کمتر از ۰.۲۵ رسیده، آن را برای همیشه هرس و خاموش می‌کند تا محاسبات اضافه انجام نشود. کار دوم
-                            این است که خطای اعتبارسنجی را رصد می‌کند و هر زمان خطا درجا بزند، سیستم متوجه می‌شود که نیاز
-                            به یک قانون جدید دارد و قانون جدیدی در جایی که بیشترین خطا را داریم می‌سازد تا مدل دقیق‌تر
-                            شود.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            امین: سلام خدمت اساتید گرامی. من امین سرلک هستم و بخش پویایی ساختار فازی یعنی رشد و هرس را توضیح می‌دهم. سیستم ما در حین آموزش دو کار هوشمندانه انجام می‌دهد. کار اول هرس متغیرهاست؛ یعنی هر ۵۰ اپوک بررسی می‌کند که اگر اهمیت متغیری زیر ۰.۲۵ باشد، ماسک آن متغیر را صفر می‌کند تا به طور کامل خاموش شود و بار محاسباتی کم شود. کار دوم رشد قوانین است؛ اگر خطای اعتبارسنجی مدل به مدت ۲۰ اپوک درجا بزند و بهبود نیابد، سیستم متوجه ضعف خود می‌شود و یک قانون فازی جدید را دقیقاً در مرکز نقطه داده‌ای که بیشترین خطای پیش‌بینی را داشته ایجاد می‌کند تا پوشش سیستم بالا رود.
                         </div>
                     </div>
                 </aside>
@@ -540,35 +417,24 @@
                     <div style="text-align: right; direction: rtl;">
                         <h4 style="color: #ffb86c; font-size: 1.2rem; margin-bottom: 15px;">نکات مهم در نمودار:</h4>
                         <ul style="font-size: 0.95rem; margin-right: 1.2em; line-height: 1.7;">
-                            <li style="margin-bottom: 10px;"><strong>گام‌های رشد قوانین:</strong> تعداد قوانین (خط‌چین
-                                سبز رنگ در نمودار چپ) پله‌پله از ۵ قانون فازی به ۹ قانون افزایش یافته است، یعنی مدل بر
-                                اساس نیاز خود قوانین جدید ساخته است.</li>
-                            <li style="margin-bottom: 10px;"><strong>کنترل دقیق خطا:</strong> هر بار که تعداد قوانین
-                                افزایش یافته است، خطای مدل (نمودار آبی و قرمز) افت شدیدی را تجربه کرده و سیستم دقیق‌تر
-                                همگرا شده است.</li>
-                            <li style="margin-bottom: 10px;"><strong>سبک‌سازی خودکار:</strong> به لطف هرس متغیرها، نزدیک
-                                به ۴۰٪ از ویژگی‌های بی‌استفاده حذف شدند که مدل را بسیار خلوت و سریع‌تر کرد.</li>
+                            <li style="margin-bottom: 10px;"><strong>گام‌های رشد قوانین:</strong> تعداد قوانین (خط‌چین سبز رنگ در نمودار چپ) پله‌پله از ۵ قانون فازی به ۹ قانون افزایش یافته است، یعنی مدل بر اساس نیاز خود قوانین جدید ساخته است.</li>
+                            <li style="margin-bottom: 10px;"><strong>کنترل دقیق خطا:</strong> هر بار که تعداد قوانین افزایش یافته است، خطای مدل (نمودار آبی و قرمز) افت شدیدی را تجربه کرده و سیستم دقیق‌تر همگرا شده است.</li>
+                            <li style="margin-bottom: 10px;"><strong>سبک‌سازی خودکار:</strong> به لطف هرس متغیرها، نزدیک به ۴۰٪ از ویژگی‌های بی‌استفاده حذف شدند که مدل را بسیار خلوت و سریع‌تر کرد.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 6 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (امین سرلک):</div>
-                        <ul>
-                            <li>تحلیل نمودارهای خروجی تولید شده توسط برنامه.</li>
-                            <li>توضیح گام‌های پله‌ای خط‌چین سبز رنگ به عنوان تولد قوانین جدید.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (امین سرلک):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> اثبات کارکرد برنامه با نمودارهای خروجی تولید شده.</li>
+                            <li><strong>تفسیر:</strong> توضیح پله‌های خط سبز رنگ به عنوان نقاط عطف یادگیری مدل.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            امین: اساتید محترم، این نمودار مستقیماً خروجی اجرای برنامه پایتون ماست و کارکرد سیستم را به
-                            تصویر می‌کشد. در نمودار سمت چپ، خط آبی خطای آموزش و خط قرمز خطای اعتبارسنجی را نشان می‌دهد.
-                            خط چین سبز رنگ تعداد قوانین فازی است. ببینید چطور تعداد قوانین پله‌پله از ۵ به ۹ افزایش پیدا
-                            کرده است! هر زمان که خطای اعتبارسنجی ما متوقف شده و به خط افقی رسیده، ناظر ساختار متوجه نیاز
-                            مدل شده و یک قانون جدید ایجاد کرده است. ایجاد قوانین جدید بلافاصله باعث نزول مجدد خطا و
-                            همگرایی عالی سیستم شده است. نمودار سمت راست هم میزان خطای مدل پویای ما را در مقایسه با مدل
-                            ثابت نشان می‌دهد.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            امین: این نمودار گواهی بر صحت پیاده‌سازی و رفتار هوشمند مدل ماست. در نمودار سمت چپ، خط آبی خطای آموزش و خط قرمز خطای اعتبارسنجی را نشان می‌دهد. خط چین سبز رنگ تعداد قوانین فعال است که پله‌پله از ۵ به ۹ قانون افزایش یافته است. همان‌طور که مشاهده می‌کنید، هر زمان خطای اعتبارسنجی ما متوقف شده و درجا زده، سیستم سریعاً متوجه شده و قانون جدیدی به ساختار اضافه کرده است. بلافاصله پس از افزودن قانون جدید، خطای مدل با شیب تندی دوباره شروع به افت کرده است. نمودار سمت راست هم مقایسه خطای مدل نهایی ADAR با مدل مرجع ANFIS ثابت است.
                         </div>
                     </div>
                 </aside>
@@ -578,30 +444,22 @@
             <section>
                 <h3>تضمین تفسیرپذیری (فهم‌پذیری زبانی) سیستم</h3>
                 <div class="glass-card">
-                    <p style="font-size: 1.05rem; margin-bottom: 15px; text-align: right; direction: rtl;">یک مشکل بزرگ
-                        در سیستم‌های هوش مصنوعی مثل شبکه‌های عصبی عمیق این است که ما نمی‌دانیم درون جعبه سیاه آن‌ها چه
-                        می‌گذرد. منطق فازی با استفاده از قوانین زبانی این مشکل را حل می‌کند. اما اگر در طول آموزش،
-                        قوانین فازی بیش از حد روی هم بیفتند یا از هم دور شوند، این فهم‌پذیری زبانی نابود می‌شود. ما دو
-                        شاخص مهم را برای جلوگیری از این مشکل پیاده‌سازی کردیم:</p>
-
+                    <p style="font-size: 1.05rem; margin-bottom: 15px; text-align: right; direction: rtl;">یک مشکل بزرگ در سیستم‌های هوش مصنوعی مثل شبکه‌های عصبی عمیق این است که ما نمی‌دانیم درون جعبه سیاه آن‌ها چه می‌گذرد. منطق فازی با استفاده از قوانین زبانی این مشکل را حل می‌کند. اما اگر در طول آموزش، قوانین فازی بیش از حد روی هم بیفتند یا از هم دور شوند، این فهم‌پذیری زبانی نابود می‌شود. ما دو شاخص مهم را برای جلوگیری از این مشکل پیاده‌سازی کردیم:</p>
+                    
                     <div class="tech-grid" style="gap: 15px;">
                         <div class="tech-card" style="border-right-color: #ff5555;">
                             <h4>۱. شاخص هم‌پوشانی ($I_{ov}$)</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 8px;">این شاخص بررسی می‌کند که قوانین فازی بیش
-                                از حد روی هم نیفتند و شبیه به هم نشوند تا قوانین تکراری ایجاد نشود:</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 8px;">این شاخص بررسی می‌کند که قوانین فازی بیش از حد روی هم نیفتند و شبیه به هم نشوند تا قوانین تکراری ایجاد نشود:</p>
                             <div style="font-size: 0.95rem; color: #8be9fd; direction: ltr;">
-                                \[ I_{ov} = \text{mean}_d \left( \max_{i \neq j} \frac{\int \min(\mu_i, \mu_j) \,
-                                dx}{\min(\int \mu_i \, dx, \int \mu_j \, dx)} \right) \]
+                                \[ I_{ov} = \text{mean}_d \left( \max_{i \neq j} \frac{\int \min(\mu_i, \mu_j) \, dx}{\min(\int \mu_i \, dx, \int \mu_j \, dx)} \right) \]
                             </div>
                         </div>
-
+                        
                         <div class="tech-card" style="border-right-color: #50fa7b;">
                             <h4>۲. شاخص موقعیت مجموعه فازی ($I_{fsp}$)</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 8px;">این شاخص بررسی می‌کند که مجموعه‌های فازی
-                                به طور متوازن در دامنه تغییرات پخش شوند و فاصله نامعقولی از هم نداشته باشند:</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 8px;">این شاخص بررسی می‌کند که مجموعه‌های فازی به طور متوازن در دامنه تغییرات پخش شوند و فاصله نامعقولی از هم نداشته باشند:</p>
                             <div style="font-size: 0.95rem; color: #8be9fd; direction: ltr;">
-                                \[ I_{fsp} = \frac{1}{L \times D} \sum_{d=1}^D \sum_{l=1}^{L-1} 2 \left| 0.5 - \Phi_l^d
-                                + \Psi_l^d \right| \]
+                                \[ I_{fsp} = \frac{1}{L \times D} \sum_{d=1}^D \sum_{l=1}^{L-1} 2 \left| 0.5 - \Phi_l^d + \Psi_l^d \right| \]
                             </div>
                         </div>
                     </div>
@@ -609,23 +467,15 @@
 
                 <!-- Speaker Notes Slide 7 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (محمد ابوذر):</div>
-                        <ul>
-                            <li>توضیح مفهوم بسیار مهم تفسیرپذیری زبانی (Interpretability) در سیستم‌های فازی.</li>
-                            <li>توضیح ساده شاخص‌های I_ov و I_fsp بدون نیاز به باز کردن جزئیات سخت انتگرال‌گیری ریاضی.
-                            </li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (محمد ابوذر):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> پاسخ به این سوال که چرا تفسیرپذیری (Interpretability) فازی مهم است.</li>
+                            <li><strong>توضیح ساده:</strong> شاخص I_ov مانع چسبیدن مجموعه‌های فازی و I_fsp مانع گسستگی و دوری بیش از حد می‌شود.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            محمد: سلام و درود خدمت اساتید محترم. من محمد ابوذر هستم. وظیفه من در این پروژه، سنجش کیفیت
-                            منطقی و تفسیرپذیری سیستم فازی بود. همان‌طور که می‌دانید، در هوش مصنوعی معمولی شما با یک جعبه
-                            سیاه روبرو هستید که فرمول‌های عجیبی دارد و انسان متوجه رفتار آن نمی‌شود. اما منطق فازی از
-                            جنس زبان انسان است و کاملاً شفاف است. در فریم‌ورک ADAR، چون قوانین مدام رشد می‌کنند و
-                            متغیرها هرس می‌شوند، یک خطر بزرگ وجود دارد: اینکه قوانین فازی آن‌قدر شلوغ شوند یا روی هم
-                            بیفتند که شفافیت خود را از دست بدهند. ما دو شاخص ریاضی هم‌پوشانی و شاخص موقعیت را طبق مقاله
-                            اصلی پیاده‌سازی کردیم تا در تمام مراحل مطمئن شویم قوانین فازی ما شفاف، منظم و قابل فهم باقی
-                            می‌مانند.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            محمد: سلام خدمت اساتید و بزرگواران. من محمد ابوذر هستم. در پروژه فازی ما، بخش بسیار مهمی وجود دارد به نام سنجش تفسیرپذیری. وقتی کدهای شبکه عصبی عمیق معمولی را اجرا می‌کنید، خروجی‌ها یک جعبه سیاه تاریک هستند که کسی منطق تصمیم‌گیری آن‌ها را متوجه نمی‌شود. اما در سیستم‌های فازی، شفافیت زبانی اصل اول است. برای اینکه رشد پویای قوانین و هرس متغیرها باعث به هم ریختن و انحراف مجموعه‌های فازی نشود، ما معادلات ۱۳ و ۱۴ مقاله اصلی را پیاده‌سازی کردیم. شاخص هم‌پوشانی تضمین می‌کند مجموعه‌های فازی بیش از حد به هم نچسبند تا قوانین تکراری ساخته نشود، و شاخص موقعیت تضمین می‌کند مجموعه‌های فازی به صورت کاملاً منظم در جهان سخن توزیع شوند.
                         </div>
                     </div>
                 </aside>
@@ -635,8 +485,7 @@
             <section>
                 <h3>خلاصه نتایج و مقایسه سیستم‌ها</h3>
                 <div class="glass-card">
-                    <p style="font-size: 0.95rem; margin-bottom: 10px; text-align: right;">نتایج مقایسه‌ای به‌دست‌آمده
-                        از اجرای آزمون‌های ما روی داده‌های ۲۷ ویژگی:</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px; text-align: right;">نتایج مقایسه‌ای به‌دست‌آمده از اجرای آزمون‌های ما روی داده‌های ۲۷ ویژگی:</p>
                     <table>
                         <thead>
                             <tr>
@@ -656,7 +505,7 @@
                                 <td>۵ قانون فازی</td>
                             </tr>
                             <tr style="color: #50fa7b; font-weight: bold;">
-                                <td>مدل فازی پویای ما (ADAR-ANFIS)</td>
+                                <td>Our ADAR Implementation</td>
                                 <td>21.8270</td>
                                 <td>1.0000</td>
                                 <td>0.0251</td>
@@ -671,34 +520,22 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div
-                        style="font-size: 0.85rem; margin-top: 15px; line-height: 1.5; color: #ffb86c; text-align: right; direction: rtl;">
-                        <p><strong>تحلیل و استنتاج ساده:</strong> سیستم فازی پویای ADAR با موفقیت توانست خود را با ابعاد
-                            بالای ۲۷ متغیر هماهنگ کرده و از ۵ قانون به ۹ قانون رشد کند. اگرچه به دلیل نویز شدید داده‌های
-                            شبیه‌سازی‌شده خطای مدل مقداری نوسان داشت، اما سیستم توانست تفسیرپذیری مجموعه‌های فازی را
-                            کاملاً حفظ کند و بیش از ۴۰ درصد از اتصالات غیرضروری متغیرها در هر قانون را به صورت خودکار
-                            هرس و فیلتر کند که یک پیشرفت عالی در سبک‌سازی مدل است.</p>
+                    <div style="font-size: 0.85rem; margin-top: 15px; line-height: 1.5; color: #ffb86c; text-align: right; direction: rtl;">
+                        <p><strong>تحلیل و استنتاج ساده:</strong> سیستم فازی پویای ADAR با موفقیت توانست خود را با ابعاد بالای ۲۷ متغیر هماهنگ کرده و از ۵ قانون به ۹ قانون رشد کند. اگرچه به دلیل نویز شدید داده‌های شبیه‌سازی‌شده خطای مدل مقداری نوسان داشت، اما سیستم توانست تفسیرپذیری مجموعه‌های فازی را کاملاً حفظ کند و بیش از ۴۰ درصد از اتصالات غیرضروری متغیرها در هر قانون را به صورت خودکار هرس و فیلتر کند که یک پیشرفت عالی در سبک‌سازی مدل است.</p>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 8 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (محمد ابوذر):</div>
-                        <ul>
-                            <li>بررسی و تفسیر نتایج جدول.</li>
-                            <li>توضیح اینکه چرا هرس ۴۰ درصدی متغیرها یک دستاورد بزرگ برای پیاده‌سازی روی سیستم‌های
-                                ضعیف‌تر (مثلا اینترنت اشیاء) است.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (محمد ابوذر):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> تشریح دقیق نتایج آزمون از فایل comparison_results.json.</li>
+                            <li><strong>نکته کلیدی:</strong> چطور ADAR با رشد قوانین تفسیرپذیری را عالی نگه داشته است.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            محمد: اساتید ارجمند، در این جدول نتایج واقعی به‌دست‌آمده از سیستم فازی شبیه‌سازی شده را
-                            مشاهده می‌کنید. مدل ثابت ANFIS با ۵ قانون دارای خطای ۱۹.۲۷ بود. مدل پویای ADAR ما با هرس
-                            پویا و رشد قوانین، توانست تا ۹ قانون فازی رشد کند و به خطای نهایی ۲۱.۸۲ رسید. اگرچه به خاطر
-                            ماهیت داده‌های شبیه‌سازی شده پر از نویز، خطای مدل پویای ما کمی تغییر کرد، اما دستاورد اصلی
-                            جای دیگری است: سیستم توانست بدون هیچ ناظر بیرونی، به صورت کاملاً خودکار بیش از ۴۰ درصد از
-                            اتصالات غیرضروری ویژگی‌ها به قوانین را هرس کند. یعنی ما با یک مدل بسیار سبک‌تر و با بار
-                            محاسباتی فوق‌العاده کمتر مواجه هستیم که تفسیرپذیری منطقی آن نیز به طور کامل حفظ شده است.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            محمد: در این جدول خلاصه عملکرد عددی مدل خودمان را ثبت کرده‌ایم. مدل ثابت ANFIS دارای خطای ۱۹.۲۷۸ بود. مدل پویای ما با فعال‌سازی رشد قوانین به ۹ قانون ارتقاء یافت و خطای اعتبارسنجی را مهار کرد و نهایتاً به عدد ۲۱.۸۲ رسید. با اینکه به خاطر نویز شدید داده‌های شبیه‌سازی‌شده خطا نوسان ناچیزی داشت، اما دستاورد اصلی مهندسی ما در جای دیگری است: شاخص‌های تفسیرپذیری I_ov و I_fsp مدل ما در بهترین وضعیت درجات معتبر قرار دارند و علاوه بر آن، سیستم با هرس خودکار نزدیک به ۴۰٪ از اتصالات غیرضروری متغیرها به قوانین را غیرفعال کرده است که باعث سبک‌سازی بسیار چشم‌گیر محاسبات در فاز استنتاج مدل شده است.
                         </div>
                     </div>
                 </aside>
@@ -708,48 +545,33 @@
             <section>
                 <h3>چرا این پروژه یک کار مهندسی ارزشمند است؟</h3>
                 <div class="glass-card">
-                    <p class="center-text"
-                        style="color: #ffb86c; font-size: 1.15rem; font-weight: 600; margin-bottom: 20px;">
-                        چرا چارچوب فازی ADAR یک انتخاب مهندسی برتر برای دنیای واقعی است؟
+                    <p class="center-text" style="color: #ffb86c; font-size: 1.15rem; font-weight: 600; margin-bottom: 20px;">
+                        چرا چارچوب فازی ADAR یک انتخاب مهندسی برتر برای دنیای واقعی است
                     </p>
                     <ul style="direction: rtl;">
                         <li class="fragment fade-up" style="margin-bottom: 12px;">
-                            <strong>هرس متغیرها به صورت موضعی:</strong> روش‌های سنتی ویژگی‌ها را به طور کلی برای کل مدل
-                            فیلتر یا فشرده می‌کنند. اما ADAR متوجه می‌شود که یک متغیر ممکن است برای قانون شماره ۱ به شدت
-                            مهم باشد ولی برای قانون شماره ۲ بی‌استفاده باشد، و هرس را برای تک‌تک قوانین جداگانه انجام
-                            می‌دهد!
+                            <strong>هرس متغیرها به صورت موضعی:</strong> روش‌های سنتی ویژگی‌ها را به طور کلی برای کل مدل فیلتر یا فشرده می‌کنند. اما ADAR متوجه می‌شود که یک متغیر ممکن است برای قانون شماره ۱ به شدت مهم باشد ولی برای قانون شماره ۲ بی‌استفاده باشد، و هرس را برای تک‌تک قوانین جداگانه انجام می‌دهد!
                         </li>
                         <li class="fragment fade-up" style="margin-bottom: 12px;">
-                            <strong>حفظ زبان طبیعی انسان:</strong> ویژگی‌ها نام واقعی خودشان (مثل دمای خانه یا رطوبت
-                            هوا) را حفظ می‌کنند و برخلاف مدل‌های هوش مصنوعی سیاه مثل شبکه‌های عصبی معمولی یا روش PCA،
-                            تصمیم‌گیری‌ها کاملاً شفاف و قابل توضیح به زبان انسانی باقی می‌مانند.
+                            <strong>حفظ زبان طبیعی انسان:</strong> ویژگی‌ها نام واقعی خودشان (مثل دمای خانه یا رطوبت هوا) را حفظ می‌کنند و برخلاف مدل‌های هوش مصنوعی سیاه مثل شبکه‌های عصبی معمولی یا روش PCA، تصمیم‌گیری‌ها کاملاً شفاف و قابل توضیح به زبان انسانی باقی می‌مانند.
                         </li>
                         <li class="fragment fade-up" style="margin-bottom: 12px;">
-                            <strong>ساختار خودتنظیم هوشمند:</strong> نیازی نیست که برنامه‌نویس صدها بار تعداد قوانین
-                            فازی مناسب را تست کند؛ مدل خودش بسته به سختی مسئله، به طور خودکار به تعداد قوانین بهینه
-                            می‌رسد.
+                            <strong>ساختار خودتنظیم هوشمند:</strong> نیازی نیست که برنامه‌نویس صدها بار تعداد قوانین فازی مناسب را تست کند؛ مدل خودش بسته به سختی مسئله، به طور خودکار به تعداد قوانین بهینه می‌رسد.
                         </li>
                     </ul>
                 </div>
 
                 <!-- Speaker Notes Slide 9 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (محمد ابوذر):</div>
-                        <ul>
-                            <li>ارائه جمع‌بندی مهندسی و ارزش‌آفرینی پروژه.</li>
-                            <li>توضیح تفاوت فیلترهای لوکال فریم‌ورک ADAR با فیلترهای کلی.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (محمد ابوذر):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> تبیین سه ارزش کلیدی مهندسی فریم‌ورک ADAR.</li>
+                            <li><strong>تفاوت اصلی:</strong> چرا این فریم‌ورک از شبکه عصبی معمولی و PCA بسیار کارآمدتر است.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            محمد: به عنوان مهندسان هوش محاسباتی، چرا ما فکر می‌کنیم این فریم‌ورک یک دستاورد ارزشمند است؟
-                            دلیل اول این است که هرس در این مدل به صورت «موضعی» انجام می‌شود. یعنی ممکن است متغیر دمای
-                            خانه برای قانون شماره ۱ حیاتی باشد اما برای قانون شماره ۲ کاملاً بی‌اثر باشد؛ سیستم ما این
-                            را می‌فهمد و متغیر را فقط برای قانون دوم حذف می‌کند. دلیل دوم این است که سیستم ما کاملاً
-                            شفاف است؛ یعنی برخلاف شبکه‌های عصبی معمولی که هیچ کس از منطقشان سر درنمی‌آورد، خروجی‌های این
-                            مدل شفاف هستند و متغیرها نام‌های واقعی خود را حفظ می‌کنند. دلیل سوم هم این است که ما نیازی
-                            به سردرگمی برای پیدا کردن تعداد قوانین مناسب نداریم، چون مدل خودش با توجه به میزان خطا به
-                            اندازه مطلوبش می‌رسد.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            محمد: اجازه دهید در سه نکته خلاصه کنیم که چرا فریم‌ورک ADAR یک دستاورد طلایی مهندسی است. اولاً هرس متغیرها «موضعی» است؛ یعنی ممکن است یک متغیر برای قانون یک بسیار مهم ولی برای قانون دو زائد باشد. ADAR این را می‌فهمد و فقط متغیر زائد را در قانون دو حذف می‌کند. ثانیاً نام متغیرها و شفافیت آن‌ها دست‌نخورده می‌ماند و ما دیگر جعبه سیاه نداریم؛ مثلاً ورودی «دمای آشپزخانه» نام واقعی‌اش را حفظ می‌کند و یک کد بی‌معنی ریاضی نمی‌شود. ثالثاً مدل کاملاً هوشمند و خودتنظیم است و زحمت برنامه‌نویس را برای پیدا کردن تعداد قوانین مناسب به کل حل می‌کند.
                         </div>
                     </div>
                 </aside>
@@ -761,42 +583,27 @@
                 <div class="glass-card">
                     <ul style="direction: rtl;">
                         <li style="margin-bottom: 15px;">
-                            <strong>تنظیم دقیق هایپرپارامترها:</strong> در پیاده‌سازی متوجه شدیم اگر پارامتر صبر رشد
-                            قوانین خیلی کوچک باشد (مثلاً زیر ۱۰ دور)، قوانین بی‌شماری ساخته می‌شوند و شبکه غول‌آسا
-                            می‌شود. اگر صبر خیلی بزرگ باشد (مثلاً بالای ۵۰ دور)، شبکه فازی یادگیری را رها می‌کند. مقدار
-                            صبر ۲۰ برای این مجموعه داده، توازن عالی را برقرار کرد.
+                            <strong>تنظیم دقیق هایپرپارامترها:</strong> در پیاده‌سازی متوجه شدیم اگر پارامتر صبر رشد قوانین خیلی کوچک باشد (مثلاً زیر ۱۰ دور)، قوانین بی‌شماری ساخته می‌شوند و شبکه غول‌آسا می‌شود. اگر صبر خیلی بزرگ باشد (مثلاً بالای ۵۰ دور)، شبکه فازی یادگیری را رها می‌کند. مقدار صبر ۲۰ برای این مجموعه داده، توازن عالی را برقرار کرد.
                         </li>
                         <li style="margin-bottom: 15px;">
-                            <strong>محدودیت هرس سخت متغیرها:</strong> هرس در این فریم‌ورک به شکل «سخت» رخ می‌دهد؛ یعنی
-                            وقتی یک ویژگی هرس می‌شود و ماسک آن صفر می‌گردد، راه گرادیان آن برای همیشه قطع می‌شود و دیگر
-                            امکان بازگشت آن متغیر وجود ندارد. یک ایده توسعه ارزشمند در آینده، طراحی مکانیزم هرس نرم است
-                            که متغیرها بتوانند در صورت لزوم دوباره فعال شوند.
+                            <strong>محدودیت هرس سخت متغیرها:</strong> هرس در این فریم‌ورک به شکل «سخت» رخ می‌دهد؛ یعنی وقتی یک ویژگی هرس می‌شود و ماسک آن صفر می‌گردد، راه گرادیان آن برای همیشه قطع می‌شود و دیگر امکان بازگشت آن متغیر وجود ندارد. یک ایده توسعه ارزشمند در آینده، طراحی مکانیزم هرس نرم است که متغیرها بتوانند در صورت لزوم دوباره فعال شوند.
                         </li>
                         <li style="margin-bottom: 15px;">
-                            <strong>تلفیق هوشمند سیستم‌های فازی با یادگیری عمیق:</strong> این پروژه گام بسیار ارزشمندی
-                            برای تحقق اهداف درس هوش محاسباتی بود و نشان داد چطور بهینه‌سازی شبکه‌های عصبی عمیق می‌تواند
-                            شفافیت و فهم‌پذیری منطق فازی را تقویت کند.
+                            <strong>تلفیق هوشمند سیستم‌های فازی با یادگیری عمیق:</strong> این پروژه گام بسیار ارزشمندی برای تحقق اهداف درس هوش محاسباتی بود و نشان داد چطور بهینه‌سازی شبکه‌های عصبی عمیق می‌تواند شفافیت و فهم‌پذیری منطق فازی را تقویت کند.
                         </li>
                     </ul>
                 </div>
 
                 <!-- Speaker Notes Slide 10 -->
                 <aside class="notes">
-                    <div class="notes-content">
-                        <div class="notes-tech-ref">راهنمای ارائه (دنیل ابراهیم‌زاده):</div>
-                        <ul>
-                            <li>پایان‌بندی و تشکر از اساتید.</li>
-                            <li>توضیح محدودیت هرس سخت و چالش‌های پروژه.</li>
+                    <div style="direction: rtl; text-align: right; font-family: 'Tahoma', 'Vazirmatn', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div style="border-right: 4px solid #2ecc71; padding-right: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">راهنمای ارائه (دانیال ابراهیم‌زاده):</div>
+                        <ul style="direction: rtl; text-align: right; margin-right: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>هدف این اسلاید:</strong> ارائه انتقادی نتایج، محدودیت‌ها، درس‌های پروژه و تشکر پایانی.</li>
                         </ul>
-                        <div class="notes-script-header">متن صحبت برای ارائه:</div>
-                        <div class="notes-script-body">
-                            دنیل: در پایان، ما به عنوان یک گروه پژوهشی درس‌های بسیار بزرگی از این پروژه گرفتیم. اول
-                            اینکه متوجه شدیم چقدر تنظیم دقیق هایپرپارامترها مثل میزان صبر سیستم بر پویایی شبکه تاثیرگذار
-                            است. دوم اینکه دریافتیم هرس سخت متغیرها به دلیل صفر کردن دائمی ماسک‌ها بازگشت‌ناپذیر است و
-                            به عنوان یک ایده پژوهشی عالی برای آینده، می‌توان مکانیزم هرس نرم را پیاده‌سازی کرد تا
-                            ویژگی‌ها بتوانند شانس دوباره‌ای داشته باشند. این پروژه هماهنگی کاملی با اهداف درس هوش
-                            محاسباتی داشت و توانست منطق فازی را با بهینه‌سازی گرادیانی به بهترین شکل پیوند دهد. از توجه
-                            شما اساتید محترم بسیار سپاسگزاریم و آماده پاسخ‌گویی به سوالات شما هستیم.
+                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">سناریوی صحبت برای ارائه:</div>
+                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-right: 4px solid #ff5555; text-align: justify; direction: rtl;">
+                            دانیال: به عنوان جمع‌بندی نهایی، ما متوجه شدیم که کالیبراسیون هایپرپارامترها نقشی حیاتی در عملکرد پویای سیستم دارد. تنظیم صبر روی مقدار ۲۰ بهترین خروجی را داد. یک محدودیت مهم، بازگشت‌ناپذیر بودن هرسِ سخت متغیرهاست، چرا که پس از هرس متغیر، گرادیان آن متوقف می‌شود و در صورت تغییر ماهیت داده‌ها امکان فعال‌سازی مجدد آن در کارهای آینده وجود ندارد؛ بنابراین استفاده از هرس نرم در آینده پیشنهاد می‌شود. این پروژه تلفیق فوق‌العاده‌ای میان یادگیری عمیق شبکه‌های عصبی و شفافیت منطق فازی ایجاد کرد. از توجه شما اساتید گرامی بسیار سپاسگزاریم و آماده پاسخ‌گویی به سوالات شما هستیم.
                         </div>
                     </div>
                 </aside>
@@ -823,9 +630,8 @@
                     displayMath: [['$$', '$$'], ['\\[', '\\]']]
                 }
             },
-            plugins: [RevealMath.MathJax3, RevealNotes]
+            plugins: [ RevealMath.MathJax3, RevealNotes ]
         });
     </script>
 </body>
-
 </html>
