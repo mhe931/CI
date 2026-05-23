@@ -43,8 +43,8 @@ We ran an ablation study comparing a static Baseline ANFIS against our dynamic A
 **Evaluation Metrics:** RMSE, Average Overlap Index ($I_{ov}$), and Position Index ($I_{fsp}$) [cite: 1].
 
 **Ablation Results:**
-*   **Baseline ANFIS (Static, 5 Rules):** RMSE = 17.6580 | $I_{ov}$ = 0.9997 
-*   **ADAR-ANFIS (Dynamic, 9 Rules):** RMSE = 16.7202 | $I_{ov}$ = 1.0000 
+*   **Baseline ANFIS (Static, 5 Rules):** RMSE = 15.0234 | $I_{ov}$ = 0.9996 
+*   **ADAR-ANFIS (Dynamic, 9 Rules):** RMSE = 14.6540 | $I_{ov}$ = 1.0000 
 
 The ADAR-ANFIS framework clearly outperformed the baseline. It successfully demonstrated its structural plasticity by growing from 5 to 9 rules in response to validation stagnation. When we contrast our RMSE results against the original paper’s findings, our implementation lands within the expected scaling margins for a standardized 27-dimensional synthetic distribution. 
 
