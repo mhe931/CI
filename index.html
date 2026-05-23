@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,10 @@
     <!-- Using Dracula base theme for premium dark aesthetic -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css">
     <!-- Google Fonts Outfit & JetBrains Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --r-main-font: 'Outfit', sans-serif;
@@ -20,35 +23,40 @@
             --r-link-color: #ff5555;
             --r-selection-background: #ff5555;
         }
-        
-        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
             color: #ffffff;
             text-transform: none;
             font-weight: 700;
             letter-spacing: -0.02em;
-            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .reveal h3 {
             color: #ff5555;
             margin-bottom: 20px;
             font-size: 1.8rem;
         }
 
-        .reveal p, .reveal li {
+        .reveal p,
+        .reveal li {
             font-size: 1.1rem;
             line-height: 1.6;
             color: #f8f8f2;
         }
 
-        .reveal ul, .reveal ol {
+        .reveal ul,
+        .reveal ol {
             margin-left: 2em;
         }
-        
+
         .reveal .center-text {
             text-align: center;
         }
-        
+
         /* Glassmorphism Container styling */
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
@@ -68,7 +76,7 @@
             gap: 20px;
             margin-top: 15px;
         }
-        
+
         .tech-card {
             background: rgba(0, 0, 0, 0.3);
             border-left: 4px solid #ff5555;
@@ -109,7 +117,7 @@
             font-family: var(--r-code-font);
             font-size: 0.95rem;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .prune-box .status-active {
@@ -141,17 +149,18 @@
             color: #ff5555;
             text-decoration: line-through;
         }
-        
+
         /* Table styling */
         .reveal table {
             margin: 15px auto;
             border-collapse: collapse;
             width: 100%;
             font-size: 0.95rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             border-radius: 8px;
             overflow: hidden;
         }
+
         .reveal th {
             background-color: #6272a4;
             color: #ffffff;
@@ -159,26 +168,28 @@
             padding: 12px 15px;
             font-weight: 600;
         }
+
         .reveal td {
             border: 1px solid #44475a;
             padding: 12px 15px;
             text-align: center;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
         }
+
         .reveal tr:nth-child(even) td {
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
         }
-        
+
         /* Hero Chart formatting */
         .chart-container {
             background: #ffffff;
             padding: 10px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             max-width: 90%;
             margin: 0 auto;
         }
-        
+
         .chart-container img {
             max-height: 450px;
             margin: 0 !important;
@@ -194,13 +205,14 @@
             border-bottom: 1px dashed #ff5555;
             transition: all 0.3s;
         }
-        
+
         .repo-link:hover {
             color: #50fa7b !important;
             border-bottom-color: #50fa7b;
         }
     </style>
 </head>
+
 <body>
     <div class="reveal">
         <div class="slides">
@@ -208,7 +220,8 @@
             <!-- Slide 1: Cover Page -->
             <section data-background-gradient="linear-gradient(135deg, #1e1f29 0%, #282a36 100%)">
                 <h2>ADAR-FIS Framework</h2>
-                <h4 style="color: #ffb86c; font-weight: 400; margin-bottom: 30px;">Adaptive Dynamic Attribute and Rule Management for Fuzzy Inference Systems</h4>
+                <h4 style="color: #ffb86c; font-weight: 400; margin-bottom: 30px;">Adaptive Dynamic Attribute and Rule
+                    Management for Fuzzy Inference Systems</h4>
                 <div class="glass-card">
                     <p class="center-text" style="font-size: 1.1rem; color: #8be9fd; margin-bottom: 15px;">
                         <strong>ICAT3360-3001 Computational Intelligence | Group Research Defense</strong>
@@ -216,14 +229,19 @@
                     <p class="center-text" style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px;">
                         University of Vaasa
                     </p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                    <div
+                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
                         <div>
-                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Daniel Ebrahimzadeh</strong> (Architecture Lead)</p>
-                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Haleh Adab</strong> (Data Pipeline)</p>
+                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Daniel
+                                    Ebrahimzadeh</strong> (Architecture Lead)</p>
+                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Haleh Adab</strong>
+                                (Data Pipeline)</p>
                         </div>
                         <div>
-                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Amin Sarlak</strong> (Structural Controller)</p>
-                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Muhammad Abuzar</strong> (QA & Validation)</p>
+                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Amin Sarlak</strong>
+                                (Structural Controller)</p>
+                            <p style="font-size: 0.95rem; text-align: left; margin: 2px 0;"><strong>Muhammad
+                                    Abuzar</strong> (QA & Validation)</p>
                         </div>
                     </div>
                 </div>
@@ -233,15 +251,29 @@
 
                 <!-- Speaker Notes Slide 1 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Daniel Ebrahimzadeh):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Welcome committee, introduce team splits and core project parameters.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Daniel Ebrahimzadeh):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Welcome committee, introduce team splits and core project
+                                parameters.</li>
                             <li><strong>Timing:</strong> Keep intro within 30-40 seconds.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            Good afternoon, esteemed committee members and colleagues. I am Daniel Ebrahimzadeh, the Architecture Lead. Today, my group members—Haleh Adab, Amin Sarlak, and Muhammad Abuzar—and I are presenting our reproduction and defense of the Adaptive Dynamic Attribute and Rule Neuro-Fuzzy Inference System, or ADAR-FIS. Our repository, hosted at github.com/mhe931/ci, contains our full implementation pipeline. In this defense, we will show how ADAR-FIS dynamically optimizes both fuzzy rules and input variables to break the computational curse of dimensionality while keeping linguistic interpretability fully intact.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            Good afternoon, esteemed committee members and colleagues. I am Daniel Ebrahimzadeh, the
+                            Architecture Lead. Today, my group members—Haleh Adab, Amin Sarlak, and Muhammad Abuzar—and
+                            I are presenting our reproduction and defense of the Adaptive Dynamic Attribute and Rule
+                            Neuro-Fuzzy Inference System, or ADAR-FIS. Our repository, hosted at github.com/mhe931/ci,
+                            contains our full implementation pipeline. In this defense, we will show how ADAR-FIS
+                            dynamically optimizes both fuzzy rules and input variables to break the computational curse
+                            of dimensionality while keeping linguistic interpretability fully intact.
                         </div>
                     </div>
                 </aside>
@@ -252,26 +284,49 @@
                 <h3>The High-Dimensional Curse in NFS</h3>
                 <div class="glass-card">
                     <p style="margin-bottom: 15px; text-align: right;">
-                        Standard Neuro-Fuzzy Systems (e.g., ANFIS) face structural explosion when handling high-dimensional spaces, such as the <strong>Appliances Energy dataset (27 features)</strong>.
+                        Standard Neuro-Fuzzy Systems (e.g., ANFIS) face structural explosion when handling
+                        high-dimensional spaces, such as the <strong>Appliances Energy dataset (27 features)</strong>.
                     </p>
                     <ul>
-                        <li><strong>Exponential Rule Growth:</strong> For $D = 27$ variables and just $M = 3$ membership functions per input, the grid partition yields $3^{27} \approx 7.6 \times 10^{12}$ rules.</li>
-                        <li><strong>Unsupervised Reduction Defect:</strong> Standard feature selection (like PCA or manual correlation cuts) projects inputs into decoupled latent spaces, stripping fuzzy sets of their physical interpretability.</li>
-                        <li><strong>ADAR Alternative:</strong> Resolves this by embedding learnable continuous weight parameters within the gradient-descent loop to perform <em>dynamic feature and rule optimization</em>.</li>
+                        <li><strong>Exponential Rule Growth:</strong> For $D = 27$ variables and just $M = 3$ membership
+                            functions per input, the grid partition yields $3^{27} \approx 7.6 \times 10^{12}$ rules.
+                        </li>
+                        <li><strong>Unsupervised Reduction Defect:</strong> Standard feature selection (like PCA or
+                            manual correlation cuts) projects inputs into decoupled latent spaces, stripping fuzzy sets
+                            of their physical interpretability.</li>
+                        <li><strong>ADAR Alternative:</strong> Resolves this by embedding learnable continuous weight
+                            parameters within the gradient-descent loop to perform <em>dynamic feature and rule
+                                optimization</em>.</li>
                     </ul>
                 </div>
 
                 <!-- Speaker Notes Slide 2 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Haleh Adab):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Define Curse of Dimensionality and illustrate why traditional feature drop ruins semantic maps.</li>
-                            <li><strong>Dataset Reference:</strong> 27 real-world features from Appliances Energy context.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Haleh Adab):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Define Curse of Dimensionality and illustrate why
+                                traditional feature drop ruins semantic maps.</li>
+                            <li><strong>Dataset Reference:</strong> 27 real-world features from Appliances Energy
+                                context.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            Thank you, Daniel. I am Haleh Adab, and I engineered the data pipeline. High-dimensional datasets, like the 27-variable Appliances Energy dataset, pose a severe threat to traditional neuro-fuzzy systems like ANFIS. If we construct a grid partition with even three membership functions per input, the rules scale exponentially to over seven trillion, which is computationally intractable. Standard dimensionality reduction techniques like PCA compress variables globally, but they project them into abstract spaces, completely destroying the semantic meaning of the fuzzy sets. ADAR-FIS resolves this by learning local feature salience directly inside the optimization loop.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            Thank you, Daniel. I am Haleh Adab, and I engineered the data pipeline. High-dimensional
+                            datasets, like the 27-variable Appliances Energy dataset, pose a severe threat to
+                            traditional neuro-fuzzy systems like ANFIS. If we construct a grid partition with even three
+                            membership functions per input, the rules scale exponentially to over seven trillion, which
+                            is computationally intractable. Standard dimensionality reduction techniques like PCA
+                            compress variables globally, but they project them into abstract spaces, completely
+                            destroying the semantic meaning of the fuzzy sets. ADAR-FIS resolves this by learning local
+                            feature salience directly inside the optimization loop.
                         </div>
                     </div>
                 </aside>
@@ -283,38 +338,64 @@
                 <div class="tech-grid">
                     <div class="tech-card">
                         <h4>Class: ADARLayer</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 5px;">Inherits from <code>nn.Module</code>. Implements the forward propagation of membership degrees.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.v</code>, <code>self.s</code>: Mean/width Gaussian parameters.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.w_a</code>, <code>self.w_r</code>: Weight tensors for dual weighting.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.m_a</code>: Buffer mask for attribute pruning.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>prune_attributes()</code>: Triggers coordinate pruning.</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">Inherits from <code>nn.Module</code>.
+                            Implements the forward propagation of membership degrees.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.v</code>, <code>self.s</code>:
+                            Mean/width Gaussian parameters.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.w_a</code>, <code>self.w_r</code>:
+                            Weight tensors for dual weighting.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>self.m_a</code>: Buffer mask for attribute
+                            pruning.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>prune_attributes()</code>: Triggers
+                            coordinate pruning.</p>
                     </div>
                     <div class="tech-card" style="border-left-color: #50fa7b;">
                         <h4>Class: StructureManager</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 5px;">Controls dynamic rule allocation and tracks training lifecycle parameters.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>patience = 20</code>: Validation stagnation window.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>max_rules = 9</code>: Dynamic boundary limits.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>check_and_grow()</code>: Appends rules at coordinates of maximum residual error.</p>
-                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>calculate_metrics()</code>: Computes $I_{ov}$ & $I_{fsp}$.</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">Controls dynamic rule allocation and tracks
+                            training lifecycle parameters.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>patience = 20</code>: Validation stagnation
+                            window.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>max_rules = 9</code>: Dynamic boundary
+                            limits.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>check_and_grow()</code>: Appends rules at
+                            coordinates of maximum residual error.</p>
+                        <p style="font-size: 0.9rem; margin: 3px 0;"><code>calculate_metrics()</code>: Computes $I_{ov}$
+                            & $I_{fsp}$.</p>
                     </div>
                 </div>
                 <div class="glass-card" style="margin-top: 15px; padding: 10px 20px;">
                     <p style="font-size: 0.95rem; text-align: center; margin: 0;">
-                        <strong>Algorithmic Lifecycle:</strong> K-Means Initialization $\rightarrow$ Forward Propagation $\rightarrow$ L1 Regularized Sparsity $\rightarrow$ Attribute Pruning $\rightarrow$ Patience-Driven Rule Growth
+                        <strong>Algorithmic Lifecycle:</strong> K-Means Initialization $\rightarrow$ Forward Propagation
+                        $\rightarrow$ L1 Regularized Sparsity $\rightarrow$ Attribute Pruning $\rightarrow$
+                        Patience-Driven Rule Growth
                     </p>
                 </div>
 
                 <!-- Speaker Notes Slide 3 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Daniel Ebrahimzadeh):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Map class names and functions from adar_anfis.py to structural processes.</li>
-                            <li><strong>Object design:</strong> PyTorch autograd leverages Adam optimizer for backprop parameters.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Daniel Ebrahimzadeh):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Map class names and functions from adar_anfis.py to
+                                structural processes.</li>
+                            <li><strong>Object design:</strong> PyTorch autograd leverages Adam optimizer for backprop
+                                parameters.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            To implement this architecture in adar_anfis.py, we designed two core classes. The first is ADARLayer, which inherits from PyTorch's nn.Module to enable backpropagation. It manages the antecedent parameters—centers self.v and widths self.s—alongside the dual weighting tensors self.w_a for attributes and self.w_r for rules, and a binary attribute mask self.m_a for hard pruning. The second is StructureManager, which regulates the dynamic growth of rules based on a validation patience trigger of 20 epochs, capped at a maximum of 9 rules.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            To implement this architecture in adar_anfis.py, we designed two core classes. The first is
+                            ADARLayer, which inherits from PyTorch's nn.Module to enable backpropagation. It manages the
+                            antecedent parameters—centers self.v and widths self.s—alongside the dual weighting tensors
+                            self.w_a for attributes and self.w_r for rules, and a binary attribute mask self.m_a for
+                            hard pruning. The second is StructureManager, which regulates the dynamic growth of rules
+                            based on a validation patience trigger of 20 epochs, capped at a maximum of 9 rules.
                         </div>
                     </div>
                 </aside>
@@ -325,34 +406,54 @@
                 <h3>Mathematical Formulations & Sparse Learning</h3>
                 <div class="glass-card">
                     <div style="font-size: 1rem; text-align: left; line-height: 1.8;">
-                        <p style="margin-bottom: 10px;"><strong>1. Dual Sigmoid Weighting:</strong> Translates learned real-valued weights to continuous $[0, 1]$ structural masks:</p>
+                        <p style="margin-bottom: 10px;"><strong>1. Dual Sigmoid Weighting:</strong> Translates learned
+                            real-valued weights to continuous $[0, 1]$ structural masks:</p>
                         <div class="center-text" style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd;">
-                            \[ \alpha_{l,i} = \sigma(w_{a,l,i}) \cdot m_{l,i} \quad \text{and} \quad \beta_l = \sigma(w_{r,l}) \]
-                        </div>
-                        
-                        <p style="margin-bottom: 10px;"><strong>2. Firing Strength with Attribute Pruning:</strong> Multiplies raw Gaussians $\mu_{l,i}$ by rule-level attribute masks:</p>
-                        <div class="center-text" style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd;">
-                            \[ f_l(\mathbf{x}) = \prod_{i=1}^D \left( \mu_{l,i}(x_i) \cdot \alpha_{l,i} + 10^{-6} \right) \]
+                            \[ \alpha_{l,i} = \sigma(w_{a,l,i}) \cdot m_{l,i} \quad \text{and} \quad \beta_l =
+                            \sigma(w_{r,l}) \]
                         </div>
 
-                        <p style="margin-bottom: 10px;"><strong>3. Structural L1 Regularization Penalty:</strong> Constrains active parameters to enforce sparsity:</p>
+                        <p style="margin-bottom: 10px;"><strong>2. Firing Strength with Attribute Pruning:</strong>
+                            Multiplies raw Gaussians $\mu_{l,i}$ by rule-level attribute masks:</p>
+                        <div class="center-text" style="font-size: 1.25rem; margin-bottom: 15px; color: #8be9fd;">
+                            \[ f_l(\mathbf{x}) = \prod_{i=1}^D \left( \mu_{l,i}(x_i) \cdot \alpha_{l,i} + 10^{-6}
+                            \right) \]
+                        </div>
+
+                        <p style="margin-bottom: 10px;"><strong>3. Structural L1 Regularization Penalty:</strong>
+                            Constrains active parameters to enforce sparsity:</p>
                         <div class="center-text" style="font-size: 1.25rem; color: #50fa7b;">
-                            \[ \mathcal{L}_{total} = \text{MSE} + 0.001 \times \left( \sum_{l,i} |w_{a,l,i}| + \sum_l |w_{r,l}| \right) \]
+                            \[ \mathcal{L}_{total} = \text{MSE} + 0.001 \times \left( \sum_{l,i} |w_{a,l,i}| + \sum_l
+                            |w_{r,l}| \right) \]
                         </div>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 4 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Daniel Ebrahimzadeh):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Mathematically establish the sigmoid masking structure and the role of L1 regularization.</li>
-                            <li><strong>Sparse weight limit:</strong> Regularization penalty driving redundant w_a parameters negative.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Daniel Ebrahimzadeh):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Mathematically establish the sigmoid masking structure and
+                                the role of L1 regularization.</li>
+                            <li><strong>Sparse weight limit:</strong> Regularization penalty driving redundant w_a
+                                parameters negative.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            Let us examine the mathematical foundations. The learned weight vectors w_a and w_r are mapped through a sigmoid function to establish continuous structural masks alpha and beta. These are multiplied with the Gaussian membership degrees to calculate the firing strengths. To enforce parameter sparsity and drive the weights of irrelevant features down, we incorporate a structural L1 regularization penalty of 0.001 times the norm of the weights directly into our mean squared error loss function.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            Let us examine the mathematical foundations. The learned weight vectors w_a and w_r are
+                            mapped through a sigmoid function to establish continuous structural masks alpha and beta.
+                            These are multiplied with the Gaussian membership degrees to calculate the firing strengths.
+                            To enforce parameter sparsity and drive the weights of irrelevant features down, we
+                            incorporate a structural L1 regularization penalty of 0.001 times the norm of the weights
+                            directly into our mean squared error loss function.
                         </div>
                     </div>
                 </aside>
@@ -362,30 +463,53 @@
             <section>
                 <h3>Rule Lifecycle: Dynamic Pruning & Growing</h3>
                 <div class="glass-card">
-                    <p style="margin-bottom: 10px;">The model dynamically mutates its parameters during training based on localized criteria:</p>
+                    <p style="margin-bottom: 10px;">The model dynamically mutates its parameters during training based
+                        on localized criteria:</p>
                     <ol style="font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">
-                        <li class="fragment" data-fragment-index="1"><strong>Attribute Pruning:</strong> Executed every 50 epochs. If $\alpha_{l,i} < \theta_{attr}$ (where $\theta_{attr} = 0.25$), the attribute mask $m_{l,i}$ drops to zero, permanently isolating that variable for rule $l$.</li>
-                        <li class="fragment" data-fragment-index="2"><strong>Rule Growing:</strong> Monitored by validation stagnation. If validation error fails to improve for 20 epochs, a new rule is born, seeding centers directly at the coordinate of the maximum training error ($\text{argmax}|y - \hat{y}|$).</li>
+                        <li class="fragment" data-fragment-index="1"><strong>Attribute Pruning:</strong> Executed every
+                            50 epochs. If $\alpha_{l,i} < \theta_{attr}$ (where $\theta_{attr}=0.25$), the attribute
+                                mask $m_{l,i}$ drops to zero, permanently isolating that variable for rule $l$.</li>
+                        <li class="fragment" data-fragment-index="2"><strong>Rule Growing:</strong> Monitored by
+                            validation stagnation. If validation error fails to improve for 20 epochs, a new rule is
+                            born, seeding centers directly at the coordinate of the maximum training error
+                            ($\text{argmax}|y - \hat{y}|$).</li>
                     </ol>
-                    
+
                     <div class="prune-container">
-                        <div class="prune-box">Attribute 1<br>$\alpha_{l,1} = 0.85$<span class="status-active">✓ Active</span></div>
-                        <div class="prune-box fragment pruned" data-fragment-index="3">Attribute 2<br>$\alpha_{l,2} = 0.12$<span class="status-pruning">⚠ Pruned!</span></div>
-                        <div class="prune-box">Attribute 3<br>$\alpha_{l,3} = 0.90$<span class="status-active">✓ Active</span></div>
+                        <div class="prune-box">Attribute 1<br>$\alpha_{l,1} = 0.85$<span class="status-active">✓
+                                Active</span></div>
+                        <div class="prune-box fragment pruned" data-fragment-index="3">Attribute 2<br>$\alpha_{l,2} =
+                            0.12$<span class="status-pruning">⚠ Pruned!</span></div>
+                        <div class="prune-box">Attribute 3<br>$\alpha_{l,3} = 0.90$<span class="status-active">✓
+                                Active</span></div>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 5 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Amin Sarlak):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Illustrate growing and pruning intervals and display the active pruning animation.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Amin Sarlak):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Illustrate growing and pruning intervals and display the
+                                active pruning animation.</li>
                             <li><strong>Visual focus:</strong> Attribute 2 fading out under trigger index 3.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            Hello everyone, I am Amin Sarlak, and I designed the dynamic structural controller. The rule lifecycle consists of two complementary processes: attribute pruning and rule growing. For pruning, we execute prune_attributes() every 50 epochs. If an attribute’s importance falls below our threshold 0.25, its mask is permanently set to 0. For rule growth, StructureManager.check_and_grow() monitors validation loss stagnation. If validation error does not improve for 20 epochs, a new rule is born, seeding its center directly at the sample with the maximum residual error.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            Hello everyone, I am Amin Sarlak, and I designed the dynamic structural controller. The rule
+                            lifecycle consists of two complementary processes: attribute pruning and rule growing. For
+                            pruning, we execute prune_attributes() every 50 epochs. If an attribute’s importance falls
+                            below our threshold 0.25, its mask is permanently set to 0. For rule growth,
+                            StructureManager.check_and_grow() monitors validation loss stagnation. If validation error
+                            does not improve for 20 epochs, a new rule is born, seeding its center directly at the
+                            sample with the maximum residual error.
                         </div>
                     </div>
                 </aside>
@@ -401,24 +525,41 @@
                     <div style="text-align: left;">
                         <h4 style="color: #ffb86c; font-size: 1.1rem; margin-bottom: 10px;">Key Observations:</h4>
                         <ul style="font-size: 0.95rem; margin-left: 1.2em; line-height: 1.6;">
-                            <li style="margin-bottom: 8px;"><strong>Rule Expansion Phase:</strong> The rule count (green dotted line) steps up from 5 to 9 rules when validation loss encounters a plateau.</li>
-                            <li style="margin-bottom: 8px;"><strong>Convergence:</strong> Growing rules provides targeted local modeling, which directly breaks down training loss bottlenecks.</li>
-                            <li style="margin-bottom: 8px;"><strong>Efficiency:</strong> Mid-training pruning drops ~40% of inactive input weights, trimming runtime computational overhead.</li>
+                            <li style="margin-bottom: 8px;"><strong>Rule Expansion Phase:</strong> The rule count (green
+                                dotted line) steps up from 5 to 9 rules when validation loss encounters a plateau.</li>
+                            <li style="margin-bottom: 8px;"><strong>Convergence:</strong> Growing rules provides
+                                targeted local modeling, which directly breaks down training loss bottlenecks.</li>
+                            <li style="margin-bottom: 8px;"><strong>Efficiency:</strong> Mid-training pruning drops ~40%
+                                of inactive input weights, trimming runtime computational overhead.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 6 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Amin Sarlak):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Showcase and interpret the subplots generated by our model loop.</li>
-                            <li><strong>Chart elements:</strong> Rule count (green dotted line) increments in response to loss plateaus.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Amin Sarlak):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Showcase and interpret the subplots generated by our model
+                                loop.</li>
+                            <li><strong>Chart elements:</strong> Rule count (green dotted line) increments in response
+                                to loss plateaus.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            This hero chart shows the empirical output of our PyTorch execution. In the left subplot, you can track the training loss in blue and the validation loss in red. The green dotted line represents the rule count, which dynamically steps up from 5 to 9 rules as the validation loss encounters plateaus. These structural additions break training bottlenecks, allowing validation loss to drop further. The right subplot shows the final RMSE comparison, demonstrating how our dynamic ADAR framework successfully adapts to the 27-dimensional task.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            This hero chart shows the empirical output of our PyTorch execution. In the left subplot,
+                            you can track the training loss in blue and the validation loss in red. The green dotted
+                            line represents the rule count, which dynamically steps up from 5 to 9 rules as the
+                            validation loss encounters plateaus. These structural additions break training bottlenecks,
+                            allowing validation loss to drop further. The right subplot shows the final RMSE comparison,
+                            demonstrating how our dynamic ADAR framework successfully adapts to the 27-dimensional task.
                         </div>
                     </div>
                 </aside>
@@ -428,41 +569,62 @@
             <section>
                 <h3>Fuzzy Set Interpretability Indices</h3>
                 <div class="glass-card">
-                    <p style="font-size: 1rem; margin-bottom: 15px;">To guarantee that dynamic structural growth does not compromise the linguistic validity of fuzzy sets, we implement two explicit metrics:</p>
-                    
+                    <p style="font-size: 1rem; margin-bottom: 15px;">To guarantee that dynamic structural growth does
+                        not compromise the linguistic validity of fuzzy sets, we implement two explicit metrics:</p>
+
                     <div class="tech-grid" style="gap: 15px;">
                         <div class="tech-card" style="border-left-color: #ff5555;">
                             <h4>1. Overlap Index ($I_{ov}$)</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Measures maximum pairwise membership function overlap via numerical integration:</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Measures maximum pairwise membership
+                                function overlap via numerical integration:</p>
                             <div style="font-size: 0.95rem; color: #8be9fd;">
-                                \[ I_{ov} = \text{mean}_d \left( \max_{i \neq j} \frac{\int \min(\mu_i, \mu_j) \, dx}{\min(\int \mu_i \, dx, \int \mu_j \, dx)} \right) \]
+                                \[ I_{ov} = \text{mean}_d \left( \max_{i \neq j} \frac{\int \min(\mu_i, \mu_j) \,
+                                dx}{\min(\int \mu_i \, dx, \int \mu_j \, dx)} \right) \]
                             </div>
                         </div>
-                        
+
                         <div class="tech-card" style="border-left-color: #50fa7b;">
                             <h4>2. Position Index ($I_{fsp}$)</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Evaluates whether fuzzy sets maintain standard uniform distribution spacing:</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Evaluates whether fuzzy sets maintain
+                                standard uniform distribution spacing:</p>
                             <div style="font-size: 0.95rem; color: #8be9fd;">
-                                \[ I_{fsp} = \frac{1}{L \times D} \sum_{d=1}^D \sum_{l=1}^{L-1} 2 \left| 0.5 - \Phi_l^d + \Psi_l^d \right| \]
+                                \[ I_{fsp} = \frac{1}{L \times D} \sum_{d=1}^D \sum_{l=1}^{L-1} 2 \left| 0.5 - \Phi_l^d
+                                + \Psi_l^d \right| \]
                             </div>
                         </div>
                     </div>
                     <p style="font-size: 0.9rem; margin-top: 15px; text-align: center; color: #ffb86c;">
-                        Functions are mapped explicitly inside <code>calculate_metrics()</code> using PyTorch's <code>torch.trapz</code> integration.
+                        Functions are mapped explicitly inside <code>calculate_metrics()</code> using PyTorch's
+                        <code>torch.trapz</code> integration.
                     </p>
                 </div>
 
                 <!-- Speaker Notes Slide 7 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Muhammad Abuzar):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Establish interpretability constraints and define I_ov and I_fsp conceptually.</li>
-                            <li><strong>Math integration:</strong> Uses 500-grid trapezoidal integration mapping over inputs.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Muhammad Abuzar):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Establish interpretability constraints and define I_ov and
+                                I_fsp conceptually.</li>
+                            <li><strong>Math integration:</strong> Uses 500-grid trapezoidal integration mapping over
+                                inputs.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            Good afternoon, committee members. I am Muhammad Abuzar, and I was responsible for quality assurance and interpretability validation. Dynamic rule growth can cause membership functions to drift or overlap excessively, destroying linguistic clarity. To prevent this, we implemented Equations 13 and 14 from the paper inside our calculate_metrics() function using numerical integration. The Overlap Index measures the worst-case overlap between adjacent fuzzy sets, while the Position Index verifies that they remain uniformly distributed across the input domain.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            Good afternoon, committee members. I am Muhammad Abuzar, and I was responsible for quality
+                            assurance and interpretability validation. Dynamic rule growth can cause membership
+                            functions to drift or overlap excessively, destroying linguistic clarity. To prevent this,
+                            we implemented Equations 13 and 14 from the paper inside our calculate_metrics() function
+                            using numerical integration. The Overlap Index measures the worst-case overlap between
+                            adjacent fuzzy sets, while the Position Index verifies that they remain uniformly
+                            distributed across the input domain.
                         </div>
                     </div>
                 </aside>
@@ -472,7 +634,8 @@
             <section>
                 <h3>Empirical Ablation Summary</h3>
                 <div class="glass-card">
-                    <p style="font-size: 0.95rem; margin-bottom: 10px;">Comparative results on the 27-feature synthetic Appliances Energy dataset:</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px;">Comparative results on the 27-feature synthetic
+                        Appliances Energy dataset:</p>
                     <table>
                         <thead>
                             <tr>
@@ -507,22 +670,42 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div style="font-size: 0.85rem; margin-top: 15px; line-height: 1.5; color: #ffb86c; text-align: left;">
-                        <p><strong>Ablation Insights:</strong> While the dynamic model grown to 9 rules results in a higher final RMSE on this highly non-linear, high-noise synthetic task due to early stopping boundaries, it successfully demonstrates robust structural plasticity and maintains tight interpretability bounds ($I_{ov}$ and $I_{fsp}$) while dropping ~40% of dormant attribute parameters.</p>
+                    <div
+                        style="font-size: 0.85rem; margin-top: 15px; line-height: 1.5; color: #ffb86c; text-align: left;">
+                        <p><strong>Ablation Insights:</strong> While the dynamic model grown to 9 rules results in a
+                            higher final RMSE on this highly non-linear, high-noise synthetic task due to early stopping
+                            boundaries, it successfully demonstrates robust structural plasticity and maintains tight
+                            interpretability bounds ($I_{ov}$ and $I_{fsp}$) while dropping ~40% of dormant attribute
+                            parameters.</p>
                     </div>
                 </div>
 
                 <!-- Speaker Notes Slide 8 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Muhammad Abuzar):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Compare static ANFIS against dynamic ADAR using comparison_results.json.</li>
-                            <li><strong>Key parameter:</strong> ~40% attribute connections pruned mid-training, reducing execution overhead.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Muhammad Abuzar):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Compare static ANFIS against dynamic ADAR using
+                                comparison_results.json.</li>
+                            <li><strong>Key parameter:</strong> ~40% attribute connections pruned mid-training, reducing
+                                execution overhead.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            Our empirical results from comparison_results.json demonstrate the performance of both models. The static Baseline ANFIS with 5 rules achieved an RMSE of 15.0234 with an overlap of 0.9996. The dynamic ADAR model grew to 9 rules, achieving an RMSE of 14.6540 and an overlap of 1.0000. While the dynamic model's RMSE is slightly higher in this high-noise synthetic task due to early stopping boundaries, it successfully demonstrated structural plasticity, maintained tight interpretability bounds, and pruned approximately 40% of the active attribute connections mid-training.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            Our empirical results from comparison_results.json demonstrate the performance of both
+                            models. The static Baseline ANFIS with 5 rules achieved an RMSE of 15.0234 with an overlap
+                            of 0.9996. The dynamic ADAR model grew to 9 rules, achieving an RMSE of 14.6540 and an
+                            overlap of 1.0000. While the dynamic model's RMSE is slightly higher in this high-noise
+                            synthetic task due to early stopping boundaries, it successfully demonstrated structural
+                            plasticity, maintained tight interpretability bounds, and pruned approximately 40% of the
+                            active attribute connections mid-training.
                         </div>
                     </div>
                 </aside>
@@ -532,33 +715,54 @@
             <section>
                 <h3>Why ADAR? Key Engineering Takeaways</h3>
                 <div class="glass-card">
-                    <p class="center-text" style="color: #ffb86c; font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">
+                    <p class="center-text"
+                        style="color: #ffb86c; font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">
                         Why is ADAR a superior architecture for high-dimensional edge applications?
                     </p>
                     <ul>
                         <li class="fragment fade-up" style="margin-bottom: 12px;">
-                            <strong>Local Feature Salience:</strong> PCA drops features globally across all points. ADAR learns that feature $x_i$ can be critically informative for rule 1 but completely redundant for rule 2, allowing localized spatial pruning.
+                            <strong>Local Feature Salience:</strong> PCA drops features globally across all points. ADAR
+                            learns that feature $x_i$ can be critically informative for rule 1 but completely redundant
+                            for rule 2, allowing localized spatial pruning.
                         </li>
                         <li class="fragment fade-up" style="margin-bottom: 12px;">
-                            <strong>Transparent Logic Preservation:</strong> Features retain their physiological physical definitions. For example, "Kitchen Energy Consumption" stays as a clear readable metric rather than becoming "PCA Component 1".
+                            <strong>Transparent Logic Preservation:</strong> Features retain their physiological
+                            physical definitions. For example, "Kitchen Energy Consumption" stays as a clear readable
+                            metric rather than becoming "PCA Component 1".
                         </li>
                         <li class="fragment fade-up" style="margin-bottom: 12px;">
-                            <strong>Adaptive Architecture:</strong> Removes the need for costly grid-search sweeps to find the optimal quantity of fuzzy rules; the system grows rules only in response to validation plateauing.
+                            <strong>Adaptive Architecture:</strong> Removes the need for costly grid-search sweeps to
+                            find the optimal quantity of fuzzy rules; the system grows rules only in response to
+                            validation plateauing.
                         </li>
                     </ul>
                 </div>
 
                 <!-- Speaker Notes Slide 9 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Muhammad Abuzar):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Emphasize engineering value (local feature selection, semantic preservation, and automation).</li>
-                            <li><strong>Hardware target:</strong> Enforces computational savings for edge devices (IoT limits).</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Muhammad Abuzar):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Emphasize engineering value (local feature selection,
+                                semantic preservation, and automation).</li>
+                            <li><strong>Hardware target:</strong> Enforces computational savings for edge devices (IoT
+                                limits).</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            From an engineering perspective, why is ADAR-FIS a superior choice for high-dimensional IoT edge deployment? Unlike global PCA, ADAR learns localized variable relevance per rule, pruning features that are redundant for a specific local region. Secondly, it preserves the physical definitions of inputs, meaning features like 'Kitchen Energy Consumption' remain completely readable. Finally, it eliminates manual parameter tuning by growing rules automatically in response to validation plateauing.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            From an engineering perspective, why is ADAR-FIS a superior choice for high-dimensional IoT
+                            edge deployment? Unlike global PCA, ADAR learns localized variable relevance per rule,
+                            pruning features that are redundant for a specific local region. Secondly, it preserves the
+                            physical definitions of inputs, meaning features like 'Kitchen Energy Consumption' remain
+                            completely readable. Finally, it eliminates manual parameter tuning by growing rules
+                            automatically in response to validation plateauing.
                         </div>
                     </div>
                 </aside>
@@ -570,58 +774,50 @@
                 <div class="glass-card">
                     <ul>
                         <li style="margin-bottom: 15px;">
-                            <strong>Patience Boundaries:</strong> We experienced that a small growth patience window (e.g., &lt; 10 epochs) leads to rule explosions, while a large window (&gt; 50 epochs) starves parameter refinement. A setting of 20 epochs proved optimal.
+                            <strong>Patience Boundaries:</strong> We experienced that a small growth patience window
+                            (e.g., &lt; 10 epochs) leads to rule explosions, while a large window (&gt; 50 epochs)
+                            starves parameter refinement. A setting of 20 epochs proved optimal.
                         </li>
                         <li style="margin-bottom: 15px;">
-                            <strong>Hard-Pruning Irreversibility:</strong> Once an attribute mask $m_{l,i}$ drops to zero, its gradient path is severed forever. In non-stationary environments, a soft-decay variable scaling method might be a safer extension.
+                            <strong>Hard-Pruning Irreversibility:</strong> Once an attribute mask $m_{l,i}$ drops to
+                            zero, its gradient path is severed forever. In non-stationary environments, a soft-decay
+                            variable scaling method might be a safer extension.
                         </li>
                         <li style="margin-bottom: 15px;">
-                            <strong>Rule Pruning Integration:</strong> While our codebase incorporates the rule pruning parameter <code>theta_r = 0.1</code> via the learned mask $\beta_l$, active rule deletion is a key area for further code optimization on extreme sparse matrices.
+                            <strong>Rule Pruning Integration:</strong> While our codebase incorporates the rule pruning
+                            parameter <code>theta_r = 0.1</code> via the learned mask $\beta_l$, active rule deletion is
+                            a key area for further code optimization on extreme sparse matrices.
                         </li>
                     </ul>
                 </div>
 
                 <!-- Speaker Notes Slide 10 -->
                 <aside class="notes">
-                    <div style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
-                        <div style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">Technical Reference (Daniel Ebrahimzadeh):</div>
-                        <ul style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
-                            <li><strong>Slide Goal:</strong> Critically review structural boundaries, hard-pruning limits, and provide a closing wrap-up.</li>
+                    <div
+                        style="direction: ltr; text-align: left; font-family: 'Outfit', sans-serif; padding: 15px; color: #222222; font-size: 1.05rem;">
+                        <div
+                            style="border-left: 4px solid #2ecc71; padding-left: 12px; margin-bottom: 12px; font-weight: bold; color: #27ae60; font-size: 1.15rem;">
+                            Technical Reference (Daniel Ebrahimzadeh):</div>
+                        <ul
+                            style="direction: ltr; text-align: left; margin-left: 1.5em; margin-bottom: 15px; font-size: 1rem; color: #444444; line-height: 1.6;">
+                            <li><strong>Slide Goal:</strong> Critically review structural boundaries, hard-pruning
+                                limits, and provide a closing wrap-up.</li>
                             <li><strong>Closeout:</strong> Thank the committee and invite questions.</li>
                         </ul>
-                        <div style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">Speaker Speech Script:</div>
-                        <div style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
-                            In conclusion, our group learned that hyperparameter calibration is critical. Setting the patience below 10 epochs causes rule explosions, while setting it above 50 epochs starves rule growth; a setting of 20 was optimal. A primary limitation is the irreversibility of hard-pruning; future work could explore a soft-decay weighting. This project perfectly aligned with the goals of ICAT3360 by combining fuzzy logic transparency with neural network optimization. Thank you for your time, and we are now open to your questions.
+                        <div
+                            style="background: #6272a4; color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold;">
+                            Speaker Speech Script:</div>
+                        <div
+                            style="color: #111111; line-height: 1.7; font-size: 1.05rem; background: rgba(0,0,0,0.04); padding: 15px; border-radius: 6px; border-left: 4px solid #ff5555; text-align: justify; direction: ltr;">
+                            In conclusion, our group learned that hyperparameter calibration is critical. Setting the
+                            patience below 10 epochs causes rule explosions, while setting it above 50 epochs starves
+                            rule growth; a setting of 20 was optimal. A primary limitation is the irreversibility of
+                            hard-pruning; future work could explore a soft-decay weighting. This project perfectly
+                            aligned with the goals of ICAT3360 by combining fuzzy logic transparency with neural network
+                            optimization. Thank you for your time, and we are now open to your questions.
                         </div>
                     </div>
                 </aside>
-            </section>
-
-            <!-- Slide 11: Verbal Viva Script (Supplementary Slide) -->
-            <section data-background-gradient="linear-gradient(135deg, #282a36 0%, #1e1f29 100%)">
-                <h3 style="text-align: center;">Complete Verbal Viva Script (Presenter Reference)</h3>
-                <div class="glass-card" style="max-height: 480px; overflow-y: auto; text-align: left; padding: 25px;">
-                    <h5 style="color: #8be9fd; margin-bottom: 10px;">Phase 1: Introduction & Data Pipeline (Daniel & Haleh)</h5>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
-                        <strong>Daniel Ebrahimzadeh:</strong> Good afternoon, esteemed committee members. We are defending our reproduction of the ADAR framework. Neuro-fuzzy systems suffer from exponential rule growth when handling high-dimensional IoT data. We structured our codebase in PyTorch using the <code>ADARLayer</code> and <code>StructureManager</code> classes to prove that neuro-fuzzy networks can dynamically grow rules and prune features directly inside the backpropagation loop without destroying semantic interpretability.
-                    </p>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
-                        <strong>Haleh Adab:</strong> I engineered the data pipeline. We verified the framework on a 27-dimensional synthetic dataset matching the scale of the Appliances Energy task. A standard ANFIS grid partition would require over seven trillion rules, which is completely intractable. ADAR-FIS breaks this bottleneck by learning localized, rule-level attribute weights.
-                    </p>
-                    
-                    <h5 style="color: #ffb86c; margin-bottom: 10px;">Phase 2: Structural Control & Mathematics (Amin)</h5>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
-                        <strong>Amin Sarlak:</strong> I designed the structural controller. The network manages its own size using two processes. First, <code>prune_attributes()</code> runs every 50 epochs, dropping attributes permanently if their learned importance falls below 0.25. Second, rule growth is driven by validation loss tracking; if validation error plateaus for 20 epochs, a new rule is seeded at the coordinate of the maximum residual error using <code>torch.argmax(errors)</code>.
-                    </p>
-                    
-                    <h5 style="color: #50fa7b; margin-bottom: 10px;">Phase 3: QA Validation & Ablation Analysis (Muhammad & Daniel wrap-up)</h5>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
-                        <strong>Muhammad Abuzar:</strong> I conducted the quality assurance validation. To ensure that rule growth does not cause membership functions to drift or overlap excessively, we implemented the Overlap Index ($I_{ov}$) and Position Index ($I_{fsp}$) using numerical integration in <code>calculate_metrics()</code>. On the 27-feature set, the dynamic model grew from 5 to 9 rules while maintaining excellent interpretability parameters and successfully pruning 40% of the active input connections.
-                    </p>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 5px;">
-                        <strong>Daniel Ebrahimzadeh:</strong> This dynamic, local feature selection preserves the exact physical definitions of our inputs, making ADAR-FIS an excellent choice for lightweight edge devices. We thank you for your time and are now open to your questions.
-                    </p>
-                </div>
             </section>
 
         </div>
@@ -645,8 +841,9 @@
                     displayMath: [['$$', '$$'], ['\\[', '\\]']]
                 }
             },
-            plugins: [ RevealMath.MathJax3, RevealNotes ]
+            plugins: [RevealMath.MathJax3, RevealNotes]
         });
     </script>
 </body>
+
 </html>
